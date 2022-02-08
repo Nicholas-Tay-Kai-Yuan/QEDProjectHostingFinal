@@ -1,0 +1,111 @@
+<!-- HTML TOP NAVIGATION COMPLONENT -->
+<!-- <li class="navigation-li">
+    <a class="nav-a" href="/group_announcement.html">Announcements</a>
+</li>
+<li class="navigation-li">
+    <a class="nav-a" href="/group_assignment.html">Assignments</a>
+</li>
+<li class="navigation-li">
+    <a class="nav-a" href="/group_members.html">Members</a>
+</li>
+<li class="navigation-li">
+    <a class="nav-a" href="/group_leaderboard.html">Leaderboard</a>
+</li>
+<li class="navigation-li">
+    <a class="nav-a" href="/group_progress.html">Progress</a>
+</li> -->
+
+<script src="./javascript/groupbar.js"></script>
+
+<div class="row container-fluid p-0">
+    <div class="col d-flex align-items-center pt-2 pb-2">
+        <img id="headerGroupImg" src="./images/sample_groupimg.png" />
+        <p id="heading">Member</p>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center p-0">
+        <a href="#" id="bars">
+            <button class="group-nav-button" onclick="displayGroupBar()">
+                Group Activity
+            </button>
+        </a>
+    </div>
+</div>
+<div class="row position-absolute end-0" id="groupBar">
+    <div class="row">
+        <div class="col mt-2">
+            <a href="#">
+                <i
+                    class="fas fa-times fa-lg link-dark"
+                    onclick="displayGroupBar()"
+                ></i>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img
+                id="groupBarImg"
+                src="./images/sample_groupimg.png"
+                alt="GroupBarImg"
+            />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <b id="groupName"></b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="separator"></div>
+        </div>
+    </div>
+    <a class="nav-a" href="./group_announcement.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-bullhorn" style="display: inline"></i>
+                <p class="sectionName">Announcements</p>
+            </div>
+        </div>
+    </a>
+    <a class="nav-a" href="./group_assignment.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-clipboard" style="display: inline"></i>
+                <p class="sectionName">Group Assignments</p>
+            </div>
+        </div>
+    </a>
+    <a class="nav-a" href="./groupqna.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-question" style="display: inline"></i>
+                <p class="sectionName">Ask a Question</p>
+            </div>
+        </div>
+    </a>
+    <a class="nav-a" href="./group_members.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-users" style="display: inline"></i>
+                <p class="sectionName">Members</p>
+            </div>
+        </div>
+    </a>
+    <a class="nav-a" href="./group_leaderboard.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-award" style="display: inline"></i>
+                <p class="sectionName">Group Leaderboard</p>
+            </div>
+        </div>
+    </a>
+    <a class="nav-a" href="./group_progress.html">
+        <div class="row section">
+            <div class="col">
+                <i class="fas fa-chart-bar" style="display: inline"></i>
+                <p class="sectionName">Progress</p>
+            </div>
+        </div>
+    </a>
+</div>

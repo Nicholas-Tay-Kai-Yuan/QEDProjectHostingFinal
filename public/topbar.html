@@ -1,0 +1,47 @@
+<script src="./javascript/notification.js"></script>
+<script src="./javascript/topbar.js"></script>
+<script src="./javascript/profile.js"></script>
+<link href="css/topbar.css" rel="stylesheet" />
+
+<!-- Top bar -->
+<div class="container-fluid p-0 py-2 row m-0 topbar-container">
+    <div class="col">
+        <b class="topbar-header-text">PSLE ONLINE</b>
+    </div>
+    <div class="col d-flex align-items-center justify-content-end">
+        <a href="#" class="me-3" onclick="return false"
+            ><img
+                src="images/bell.png"
+                class="img-fluid notification-icon"
+                id="bellBtn"
+                onclick="displayNotification()"
+                alt="notification"
+        /></a>
+        <a href="profile.html"
+            ><img
+                id="topbar-pfp"
+                src="avatars/frog.png"
+                class="img-fluid profile-icon"
+                alt="profile"
+        /></a>
+    </div>
+</div>
+<!-- Notifications -->
+<div
+    id="notificationBox"
+    class="position-absolute end-0 me-2 mt-2 notification-overlay"
+>
+    <div>
+        <div class="notification-title">
+            <b class="notification-header-text">Notification</b>
+            <a class="close-button" href="#" onclick="return false"
+                ><i
+                    class="fas fa-times fa-lg link-dark"
+                    onclick="displayNotification()"
+                ></i
+            ></a>
+        </div>
+        <div class="notification-list" id="notificationList"></div>
+
+    </div>
+</div>

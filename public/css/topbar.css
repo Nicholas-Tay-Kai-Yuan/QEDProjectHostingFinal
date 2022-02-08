@@ -1,0 +1,176 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/poppins/Poppins-Regular.ttf);
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+@font-face {
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+/* Top Bar*/
+
+.topbar-container {
+    background-color: #b1dbff;
+}
+
+.topbar-header-text {
+    font-family: Feather, Arial, Helvetica, sans-serif;
+}
+
+.notification-icon {
+    width: 25px;
+    height: auto;
+}
+
+.profile-icon {
+    width: 25px;
+    height: auto;
+    border-radius: 1000px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* Notifications */
+
+.notification-overlay {
+    background-color: #f1faff;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+}
+
+.notification-list {
+    width: 40vw;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.close-button {
+    float: right;
+}
+
+.notification-header-text {
+    font-family: Feather, Arial, Helvetica, sans-serif;
+}
+
+.notification-title {
+    padding: 5px 10px;
+}
+
+/* No notifications of the user */
+
+.no-notification {
+    text-align: center;
+}
+
+.no-notification > span {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    display: inline-block;
+}
+
+/* Individual Notification styles */
+
+.notification-link {
+    color: black;
+    text-decoration: none;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+}
+
+.notification-container {
+    padding: 10px;
+}
+
+.notification-container-unread {
+    background-color: #d4ebff;
+}
+
+.notification-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1000px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.notification-content {
+    font-size: 12px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.notification-time {
+    font-size: 12px;
+    font-family: Coolvetica, Arial, Helvetica, sans-serif;
+    float: right;
+    vertical-align: top;
+}
+
+.notification-content-container {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.notification-time-container {
+    width: 10%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notification-image-container {
+    width: 15%;
+    margin-right: 2%;
+    display: inline-block;
+}
+
+.notification-right-items-container {
+    width: 80%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Scrolltrack styles */
+
+.notification-list::-webkit-scrollbar {
+    background: #d4ebff;
+    width: 5px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 100px;
+}
+
+/* Hover Styles */
+
+.notification-container:hover {
+    background-color: #acd6fc;
+    cursor: pointer;
+}
+
+/* Small Device Screen */
+
+@media (max-width: 768px) {
+    .notification-list {
+        width: 60vw;
+    }
+}

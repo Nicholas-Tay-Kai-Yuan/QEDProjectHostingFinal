@@ -1,0 +1,409 @@
+[{
+  "_id": {
+    "$oid": "6140051b31eaf845845df519"
+  },
+  "title": "aavv",
+  "level_id": {
+    "$oid": "611c81012b391f2770603e99"
+  },
+  "topic_id": {
+    "$oid": "611c81012b391f2770603e9a"
+  },
+  "skill_id": {
+    "$oid": "611c81012b391f2770603e9b"
+  },
+  "assigned_by": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "group_id": {
+    "$oid": "613ffe3531eaf845845df474"
+  },
+  "deadline": {
+    "$date": "2021-10-09T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6140065b31eaf845845df58a"
+  },
+  "title": "Assigment1",
+  "level_id": {
+    "$oid": "611c81012b391f2770603e99"
+  },
+  "topic_id": {
+    "$oid": "611c81012b391f2770603e9a"
+  },
+  "skill_id": {
+    "$oid": "611c81012b391f2770603e9b"
+  },
+  "assigned_by": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "group_id": {
+    "$oid": "613ffe3531eaf845845df474"
+  },
+  "deadline": {
+    "$date": "2021-10-09T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6140067231eaf845845df59d"
+  },
+  "title": "Assignment1",
+  "level_id": {
+    "$oid": "611c81012b391f2770603e99"
+  },
+  "topic_id": {
+    "$oid": "611c81012b391f2770603e9a"
+  },
+  "skill_id": {
+    "$oid": "611c81012b391f2770603e9c"
+  },
+  "assigned_by": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "group_id": {
+    "$oid": "613ffe3531eaf845845df474"
+  },
+  "deadline": {
+    "$date": "2021-10-09T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6140068131eaf845845df5a4"
+  },
+  "title": "Assignment 1",
+  "level_id": {
+    "$oid": "611c81012b391f2770603e99"
+  },
+  "topic_id": {
+    "$oid": "611c81012b391f2770603e9a"
+  },
+  "skill_id": {
+    "$oid": "611c81012b391f2770603e9d"
+  },
+  "assigned_by": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "group_id": {
+    "$oid": "613ffe3531eaf845845df474"
+  },
+  "deadline": {
+    "$date": "2021-10-09T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61400edc9b1d0e83b8509cfe"
+  },
+  "title": "Test",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "61400aaa9b1d0e83b8509c87"
+  },
+  "skill_id": {
+    "$oid": "61400aef9b1d0e83b8509c8b"
+  },
+  "assigned_by": {
+    "$oid": "61400ea49b1d0e83b8509cea"
+  },
+  "group_id": {
+    "$oid": "61400eca9b1d0e83b8509cf5"
+  },
+  "deadline": {
+    "$date": "2021-10-01T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "618def59dfc806f4803727b8"
+  },
+  "title": "assgnment1",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "618b375b6cbbf4cea8a59eb0"
+  },
+  "assigned_by": {
+    "$oid": "61400ea49b1d0e83b8509cea"
+  },
+  "group_id": {
+    "$oid": "61400eca9b1d0e83b8509cf5"
+  },
+  "deadline": {
+    "$date": "2021-11-24T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4765d2b18a4641580eec"
+  },
+  "title": "Decimals",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "617a47571ba6dbee7a2d5d9a"
+  },
+  "skill_id": {
+    "$oid": "617a48791ba6dbee7a2d5dac"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4776d2b18a4641580ef2"
+  },
+  "title": "Decimals2",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "617a47571ba6dbee7a2d5d9a"
+  },
+  "skill_id": {
+    "$oid": "617a48ad1ba6dbee7a2d5db0"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4786d2b18a4641580ef8"
+  },
+  "title": "Decimals3",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "617a47571ba6dbee7a2d5d9a"
+  },
+  "skill_id": {
+    "$oid": "617a48e31ba6dbee7a2d5db4"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f479bd2b18a4641580efe"
+  },
+  "title": "Decimals4",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "617a47571ba6dbee7a2d5d9a"
+  },
+  "skill_id": {
+    "$oid": "617a490b1ba6dbee7a2d5db8"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f47dcd2b18a4641580f18"
+  },
+  "title": "Algebra",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "618b375b6cbbf4cea8a59eb0"
+  },
+  "assigned_by": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "group_id": {
+    "$oid": "619f47c6d2b18a4641580f0f"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f47ebd2b18a4641580f1e"
+  },
+  "title": "Algebra2",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "61949cbb0567b8478ca8398c"
+  },
+  "assigned_by": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "group_id": {
+    "$oid": "619f47c6d2b18a4641580f0f"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f47fbd2b18a4641580f24"
+  },
+  "title": "Algebra3",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "619daee0d9b410fd9833b196"
+  },
+  "assigned_by": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "group_id": {
+    "$oid": "619f47c6d2b18a4641580f0f"
+  },
+  "deadline": {
+    "$date": "2021-11-25T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aebbcd5f02c9cdc03a11ef"
+  },
+  "title": "title1",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "617a47571ba6dbee7a2d5d9a"
+  },
+  "skill_id": {
+    "$oid": "617a48791ba6dbee7a2d5dac"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "61aebba35f02c9cdc03a11d0"
+  },
+  "deadline": {
+    "$date": "2021-12-24T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c0251ec056fb46a073143a"
+  },
+  "title": "Assugnment",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "61a8351ffcbe1de6e67bcaeb"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "deadline": {
+    "$date": "2022-01-08T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c957f599c66a0142f73b0f"
+  },
+  "title": "Assgnment 2",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "618b375b6cbbf4cea8a59eb0"
+  },
+  "assigned_by": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "group_id": {
+    "$oid": "61aebba35f02c9cdc03a11d0"
+  },
+  "deadline": {
+    "$date": "2021-12-30T00:00:00Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61dd4c35d57f0f36f05db770"
+  },
+  "title": "Assignment 1",
+  "level_id": {
+    "$oid": "61400a919b1d0e83b8509c79"
+  },
+  "topic_id": {
+    "$oid": "618b37236cbbf4cea8a59eac"
+  },
+  "skill_id": {
+    "$oid": "618b375b6cbbf4cea8a59eb0"
+  },
+  "assigned_by": {
+    "$oid": "614000fd31eaf845845df4a1"
+  },
+  "group_id": {
+    "$oid": "61dd4bead57f0f36f05db767"
+  },
+  "deadline": {
+    "$date": "2022-01-29T00:00:00Z"
+  },
+  "__v": 0
+}]

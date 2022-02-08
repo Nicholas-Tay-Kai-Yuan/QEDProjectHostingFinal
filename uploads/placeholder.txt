@@ -1,0 +1,2 @@
+Just a file for to upload this file directory
+uploads folder is responsible for both sharing to facebook and dynamic images in PSLEOnline

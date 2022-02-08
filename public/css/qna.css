@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/poppins/Poppins-Regular.ttf);
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+@font-face {
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+#askqnBtn {
+    background: #3db3ff;
+    border-radius: 7px;
+    color: white;
+    border-color: transparent;
+}
+
+#emptyContainer {
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#askQnContainer {
+    display: none;
+    margin: 30px 0px;
+}
+
+#askQnContainer .form-group {
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+#postQnBtn,
+#cancelQnBtn,
+#postAnsBtn {
+    color: white;
+    font-family: Poppins;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.form-control:focus {
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+#questionsContainer,
+#questionContainer {
+    display: none;
+}
+
+.questionPost {
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.questionPost:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.answerCount {
+    width: 60px;
+    height: 60px;
+    background: #5eba7d;
+    border: 1px solid #5eba7d;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+}
+
+.count {
+    font-size: 18px;
+}
+
+.countLabel {
+    font-size: 8px;
+}
+
+.count,
+.countLabel {
+    font-family: Poppins;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.titleQn {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.ownerQn {
+    font-family: Feather;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.answerRow {
+    margin-right: 1.5rem;
+    justify-content: end;
+    align-items: center;
+}
+
+.ownerImg,
+.answerImg {
+    width: 54px;
+    height: auto;
+}
+
+.usePfp {
+    border-radius: 1000px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.usePfpDetail {
+    border-radius: 1000px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+#ownerImgContainer {
+    justify-content: center;
+}
+
+.answerImgContainer {
+    justify-content: center;
+}
+
+.questionImage {
+    margin: 2vh 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#questionTitle,
+#questionContent,
+#questionOwner,
+#ansLabel,
+#ansCount,
+.answerBody,
+.answerOwner {
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+#questionTitle {
+    font-size: 30px;
+}
+
+#questionContent,
+#questionOwner,
+.answerBody,
+.answerOwner {
+    font-size: 12px;
+}
+
+#line {
+    margin-top: 1rem;
+    border-top: 1px solid #c4c4c4;
+}
+
+.likeCount {
+    font-family: Coolvetica;
+    font-weight: 400;
+}
+
+.likeBtn {
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .answerRow {
+        justify-content: center;
+        margin-right: 0;
+    }
+    .titleQn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #ownerImgContainer .ownerImg {
+        margin-top: 1rem;
+    }
+    #ownerImgContainer {
+        justify-content: start;
+    }
+    .answerImgContainer {
+        justify-content: start;
+        margin-left: 14%;
+    }
+    .answerImg {
+        margin-top: 1rem;
+    }
+}

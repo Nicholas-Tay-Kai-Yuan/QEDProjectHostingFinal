@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+    font-family: Feather;
+    src: url("./fonts/feather/feather.ttf");
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url("./fonts/coolvetica/coolvetica_rg.ttf");
+}
+
+/* Groups Navigations Hover styles */
+::-moz-selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+::selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+.rightbar {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* Leaderboard header and change school button styles => Only applies to normal leaderboard */
+
+.leaderboard-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.title-leaderboard {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    margin: 0 1vw 0 1vw;
+    font-size: 36px;
+}
+
+.badge-left,
+.badge-right {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.change-level {
+    background: #f58c8c;
+    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 14px;
+    margin: 2vw 0 2vw 3vw;
+    font-size: 16px;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.fa-sync-alt {
+    margin-right: 5px;
+}
+
+/* NO RESULT */
+#noresult {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TOP 3 Students */
+#top-3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 992px;
+    margin: 24px auto;
+}
+
+.top-rank {
+    color: #ffffff;
+    margin: 0 20px;
+    padding: 24px 20px 20px;
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: column;
+    align-self: flex-start;
+    border-radius: 20px;
+    /* box-shadow: 6px 6px 14px #26262635; */
+}
+
+.first {
+    background: linear-gradient(to right bottom, #b78628, #ffd667, #fcc201);
+    box-shadow: 0px 4px 50px 10px rgba(255, 214, 0, 0.5);
+}
+
+.second {
+    background: linear-gradient(to right bottom, #8e9eab, #eef2f3);
+    box-shadow: 0px 4px 50px 10px rgba(82, 82, 82, 0.5);
+}
+
+.third {
+    background: linear-gradient(to right bottom, #6d6027, #d3cbb8);
+    box-shadow: 0px 4px 50px 10px rgba(227, 144, 46, 0.5);
+}
+
+.top-rank-num {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.pfp {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 1000px;
+    margin: auto;
+    aspect-ratio: 1;
+    object-fit: cover;    
+}
+
+.top-rank:nth-child(2) {
+    order: -1;
+    margin-top: 50px;
+}
+
+.top-rank:nth-child(3) {
+    margin-top: 70px;
+}
+
+.top-name {
+    font-family: "Feather", "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 15px 0 15px 0;
+}
+
+.top-grade,
+.top-school,
+.top-avg-score-header {
+    font-size: 13px;
+    font-family: "Poppins", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.stats {
+    margin-top: 15px;
+}
+
+.top-avg-score {
+    font-family: "Feather", "Roboto", Arial, Helvetica, sans-serif;
+    padding: 6px;
+    width: 33%;
+    font-size: 30px;
+}
+
+/* Leaderboard list */
+
+th:first-child {
+    border-radius: 7px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 7px 0 0;
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 7px;
+}
+
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 7px 0;
+}
+
+table {
+    overflow-y: scroll;
+}
+
+.heading {
+    color: #ffffff;
+    font-family: "Feather", "Roboto", Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    font-size: 18px;
+    background: linear-gradient(180deg, #009ffd 0%, #5762d5 100%);
+    border-radius: 7px;
+}
+
+#leaderboard {
+    max-width: 996px;
+    font-size: 15px;
+    margin: 19px auto;
+}
+
+.student-row {
+    background: linear-gradient(180deg, #a7bfe8, #6190e8);
+    color: #ffffff;
+    font-family: "Feather", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Dropdown selection */
+.dropdowns {
+    display: inline-block;
+}
+
+.type-dropdown {
+    font-size: 1.5vw;
+    visibility: hidden;
+    margin: 3vw 0 2vw 5vw;
+}
+
+.text-dropdown {
+    font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+    margin-right: 3vw;
+}
+
+#type-button,
+#filter-button {
+    font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 4px 0 4px 1vw;
+    background-position-x: 95%;
+    width: 23vw;
+    text-align: left;
+    visibility: hidden;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.right {
+    float: right;
+    right: 0;
+    font-size: 2.5vw;
+    margin-right: 1vw;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:last-child {
+    margin-top: 10px;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 160px;
+    box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    visibility: hidden;
+    min-width: 150px;
+    width: 23vw;
+    border-radius: 7px;
+}
+
+.dropdown-content div:hover {
+    cursor: pointer;
+    background-color: #6696CA;
+    color: #ffffff;
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Poppins", "Roboto", Arial, Helvetica, sans-serif;
+    min-width: 150px;
+    width: 23vw;
+    border-radius: 7px;
+    color: #4f4f4f;
+    font-size: 1.3vw;
+}
+/* Tablet and mobile view */
+
+@media (max-width: 768px) {
+    .top-rank {
+        font-size: 11px;
+        padding: 14px 5px;
+        margin-left: 3px;
+        margin-right: 2px;
+    }
+    .pfp {
+        height: 50px;
+        width: 50px;
+    }
+    .top-rank-num {
+        padding: 0;
+    }
+    .stats {
+        flex-direction: column;
+    }
+    .top-avg-score {
+        font-size: 9px;
+        width: 100%;
+        padding: 2px 0;
+        text-align: center;
+        border: none;
+    }
+    .heading {
+        font-size: 10px;
+    }
+    #leaderboard {
+        font-size: 11px;
+        margin: 19px 8px;
+    }
+    .student-row span {
+        padding: 4px;
+    }
+    .top-rank-num {
+        font-size: 12px;
+    }
+    .heading span {
+        padding: 0;
+    }
+    .type-dropdown {
+        font-size: 10px;
+    }
+    .dropdown-content div {
+        font-size: 9px;
+    }
+}

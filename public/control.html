@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSLEOnline</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <!--Fontawesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css">
+  </link>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+  <!--Javascript-->
+  <script src="./javascript/sidebar.js"></script>
+  <script src="./javascript/auth.js"></script>
+  <script src="./javascript/control.js"></script>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="./css/control.css">
+
+
+
+</head>
+
+<body class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="sidebar col-1 col-sm-4 col-md-3 col-xl-2 px-0"></div>
+    <div class="rightbar col-11 col-sm-8 col-md-9 col-xl-10 p-0 content">
+      <div class="header"></div>
+      <a href="" id="back"><i class="fas fa-chevron-left"></i></a>
+      <h1 class="title">Quiz Control Panel</h1>
+
+      <h4 id="levelTag" class="title"></h4>
+      <div id="syllabusContainer" class="row mx-auto">
+        <div id="emptyContainer" class="row">
+          <span class="h5 pt-4 text-center" style="color:#003844">No Levels Available</span>
+          <button id="setDefault" class="btn btn-warning mt-2 text-center" style="border-radius:15px;">Set
+            Default</button>
+        </div>
+        <div id="primaryLevelContainer" class="col-lg-4 col-md-8">
+          <div class="row">
+            <p class="levelName">Primary</p>
+          </div>
+          <div class="row">
+            <img id="primaryimg" src="images/primary_img.png" />
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div id="levelContainerBackground">
+              <p class="m-0">Select level</p>
+              <div id="levelContainer" class="d-flex col px-2">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="topicContainer" class="col"></div>
+        <div id="secondaryLevelContainer" class="col-lg-4 col-md-8">
+          <div class="row">
+            <p class="levelName">Secondary</p>
+          </div>
+          <div class="row">
+            <img id="primaryimg" src="images/secondary_img.png" />
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div id="levelContainerBackground2">
+              <p class="m-0">Select level</p>
+              <div id="levelContainer2" class="d-flex col px-2">
+                <!-- <button>Secondary 1</button>
+                <button>Secondary 2</button>
+                <button>Secondary 3</button>
+                <button>Secondary 4</button> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Level Modal-->
+    <div class="modal fade" id="levelModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="levelModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="levelModalTitle">New Level</h5>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="text-center">
+              <div class="mb-2">
+                <label for="inputLevel" class="col-form-label">Level Name</label>
+                <input type="number" class="form-control" id="inputLevel" min="1">
+                <small class="mt-2" id="inputLevelErr" style="color:red;"></small>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn addLevelBtn">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Topic Modal-->
+    <div class="modal fade" id="topicModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="topicModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="topicModalTitle">New Topic</h5>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="text-center">
+              <input type="text" class="form-control" id="level_id" style="display: none;">
+              <div class="mb-2">
+                <label for="inputTopic" class="col-form-label">Topic Name</label>
+                <!-- <input type="text" class="form-control" id="inputTopic"> -->
+                <select name="addTopic" id="inputTopic" class="form-select">
+                  <option value="none" selected disabled>Choose a topic</option>
+                  <option value="Fractions">Fractions</option>
+                  <option value="Approximation">Approximation</option>
+                  <option value="Integers">Integers</option>
+                  <option value="Ordering Numbers">Ordering Numbers</option>
+                  <option value="Real Numbers">Real Numbers</option>
+                  <option value="Decimals">Decimals</option>
+                  <option value="Algebra">Algebra</option>
+                </select>
+                <small class="mt-2" id="inputTopicErr" style="color:red;"></small>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn addTopicBtn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skill Modal -->
+    <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="skillModalLabel">Edit Skill
+            </h5>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="text" id="skill_id" style="display: none;" />
+              <input type="text" id="topic_id" style="display: none;" />
+              <div class="row">
+                <div class="mb-2 col-md-6">
+                  <label for="skill_name" class="col-form-label">Skill Name</label>
+                  <input type="text" class="form-control" id="skill_name">
+                </div>
+                <div class="mb-2 col-md-6">
+                  <label for="skill_code" class="col-form-label">Skill Code</label>
+                  <!-- <input type="text" class="form-control" id="skill_code"> -->
+                  <select name="skillCode" id="skill_code" class="form-select">
+                    <option value="none" selected disabled>Choose the algorithm used for the topic</option>
+                    <option value="FRAC_SIMPLIFY">FRAC_SIMPLIFY</option>
+                    <option value="FRAC_ADD">FRAC_ADD</option>
+                    <option value="FRAC_MULTIPLY">FRAC_MULTIPLY</option>
+                    <option value="FRAC_ADD_SUB">FRAC_ADD_SUB</option>
+                    <option value="ROUND_OFF">ROUND_OFF</option>
+                    <option value="INTEGERS_ADD_SUB">INTEGERS_ADD_SUB</option>
+                    <!-- <option value="ALGEBRA_MULTIPLY">ALGEBRA_MULTIPLY</option> -->
+                    <option value="ORDER_NUM">ORDER_NUM</option>
+                    <option value="RATIONAL_NUM">RATIONAL_NUM</option>
+
+                    <option value="DECIMAL_ROUNDING_OFF">DECIMAL_ROUNDING_OFF</option>\
+                    <option value="DECIMAL_ADDITION_SUBTRACTION">DECIMAL_ADDITION/SUBTRACTION</option>
+                    <option value="DECIMAL_MULTIPLICATION">DECIMAL_MULTIPLICATION</option>
+                    <option value="DECIMAL_DIVISION">DECIMAL_DIVISION</option>
+
+                    <option value="ALGEBRA_ADDITION">ALGEBRA_ADDITION</option>
+                    <option value="ALGEBRA_MULTIPLICATION">ALGEBRA_MULTIPLICATION</option>
+                    <option value="ALGEBRA_DIVISION">ALGEBRA_DIVISION</option>
+                    <option value="ALGEBRA_EXPANSION">ALGEBRA_EXPANSION</option>
+                    <option value="ALGEBRA_LINEAR_EQUATION">ALGEBRA_LINEAR_EQUATION</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-2 col-md-6">
+                  <label for="num_of_qn" class="col-form-label">Number of Questions in a Quiz</label>
+                  <input type="number" class="form-control" id="num_of_qn" step="10">
+                  <small class="mt-2" id="num-error" style="display: none; color:red;">Must be a multiple of 10</small>
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="duration" class="col-form-label">Quiz Duration</label>
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="duration">
+                    <span class="input-group-text" id="basic-addon1">mins</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 row mx-auto">
+                <label for="percentage_easy" class="col-form-label"><strong>Percentage Difficulty of Quiz</strong>
+                  <i data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="The number of questions for each difficulty in percentage"></i>
+                </label>
+                <div class="col">
+                  <div class="row my-3">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col-3">
+                          <label for="percentage_easy" class="col-form-label"><small>Easy</small></label>
+                        </div>
+                        <div class="col-1">
+                          <small>:</small>
+                        </div>
+                        <div class="col-8">
+                          <input type="number" class="form-control percentage_difficulty" id="percentage_easy"
+                            step="10">
+                        </div>
+                      </div>
+                      <!-- <small id="easy_num"></small> -->
+                    </div>
+                  </div>
+                  <!-- <div class="row"> -->
+                  <div class="row my-3">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col-3">
+                          <label for="percentage_medium" class="col-form-label"><small>Medium</small></label>
+                        </div>
+                        <div class="col-1">
+                          <small>:</small>
+                        </div>
+                        <div class="col-8">
+                          <input type="number" class="form-control percentage_difficulty" id="percentage_medium"
+                            step="10">
+                        </div>
+                      </div>
+                      <!-- <small id="medium_num"></small> -->
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col-3">
+                          <label for="percentage_difficult" class="col-form-label"><small>Difficult</small></label>
+                        </div>
+                        <div class="col-1">
+                          <small>:</small>
+                        </div>
+                        <div class="col-8">
+                          <input type="number" class="form-control percentage_difficulty" id="percentage_difficult"
+                            step="10">
+                        </div>
+                      </div>
+                      <!-- <small id="difficult_num"></small> -->
+                    </div>
+                  </div>
+
+                  <strong class="pt-2"><small id="total_num"></small></strong>
+                </div>
+              </div>
+              <!-- </div> -->
+
+              <div class="mb-4 row mx-auto" id="difficultyContainer">
+                <div class="col-10">
+                  <div class="row">
+                    <p>Difficulty Settings</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                      <p>Minimum Value</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                      <p>Maximum Value</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <p>Easy</p>
+                    </div>
+                    <div class="col-1">
+                      <p>:</p>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-easy" id="easy_values_min" data-index="0"
+                        value="10" />
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-easy" id="easy_values_max" data-index="1"
+                        value="90" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <p>Medium</p>
+                    </div>
+                    <div class="col-1">
+                      <p>:</p>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-medium" id="medium_values_min" data-index="0"
+                        value="10" />
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-medium" id="medium_values_max" data-index="1"
+                        value="90" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <p>Difficult</p>
+                    </div>
+                    <div class="col-1">
+                      <p>:</p>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-difficult" id="difficult_values_min"
+                        data-index="0" value="10" />
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control sliderValue-difficult" id="difficult_values_max"
+                        data-index="1" value="90" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <label for="easy_values_min" class="col-form-label"><strong>Range for Easy Questions</strong>
+                  <i data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="The min and max number used to generate random values for easy questions"></i>
+                </label>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="easy_values_min" class="col-form-label"><small>Min</small></label>
+                    <input type="number" class="form-control sliderValue-easy" id="easy_values_min" data-index="0"
+                      value="10" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="easy_values_max" class="col-form-label"><small>Max</small></label>
+                    <input type="number" class="form-control sliderValue-easy" id="easy_values_max" data-index="1"
+                      value="90" />
+                  </div>
+                </div> -->
+              </div>
+              <!-- <div class="mb-4">
+                <label for="medium_values_min" class="col-form-label"><strong>Range for Medium Questions</strong>
+                  <i data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="The min and max number used to generate random values for medium questions"></i>
+                </label>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="medium_values_min" class="col-form-label"><small>Min</small></label>
+                    <input type="number" class="form-control sliderValue-medium" id="medium_values_min" data-index="0"
+                      value="10" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="medium_values_max" class="col-form-label"><small>Max</small></label>
+                    <input type="number" class="form-control sliderValue-medium" id="medium_values_max" data-index="1"
+                      value="90" />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="difficult_values_min" class="col-form-label"><strong>Range for Difficult
+                    Questions</strong>
+                  <i data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="The min and max number used to generate random values for difficult questions"></i>
+                </label>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="difficult_values_min" class="col-form-label"><small>Min</small></label>
+                    <input type="number" class="form-control sliderValue-difficult" id="difficult_values_min"
+                      data-index="0" value="10" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="difficult_values_max" class="col-form-label"><small>Max</small></label>
+                    <input type="number" class="form-control sliderValue-difficult" id="difficult_values_max"
+                      data-index="1" value="90" />
+                  </div>
+                </div>
+              </div> -->
+              <span id="error" style="color:red;"></span>
+            </form>
+          </div>
+          <div class="d-flex justify-content-end pb-4">
+            <button type="button" class="btn me-1 deleteSkillBtn">Delete</button>
+            <button type="button" class="btn updateSkillBtn d-flex align-items-center"><i class="fas fa-plus"></i>
+              <p class="m-0 mx-auto">Submit Skill</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

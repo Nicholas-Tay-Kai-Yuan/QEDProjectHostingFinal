@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "613eea947b23c9eeb907ec37"
+  },
+  "points": 3245,
+  "life": 0,
+  "high_score": 445,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "613eea947b23c9eeb907ec35"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "613ffb7a31eaf845845df45f"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "614000fd31eaf845845df4a3"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "614000fd31eaf845845df4a1"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61400ea49b1d0e83b8509cec"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "61400ea49b1d0e83b8509cea"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "614c1f748c8aa7c83d5fb977"
+  },
+  "points": 975,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "614c1f748c8aa7c83d5fb975"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6166461192913b0970917dbf"
+  },
+  "points": 325,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "6166461092913b0970917dbd"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4639d2b18a4641580eb1"
+  },
+  "points": 630,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "619f4638d2b18a4641580eaf"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4659d2b18a4641580eb6"
+  },
+  "points": 150,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "619f4659d2b18a4641580eb4"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4678d2b18a4641580ebb"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "619f4678d2b18a4641580eb9"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f46dcd2b18a4641580ec4"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f46f3d2b18a4641580ec9"
+  },
+  "points": 0,
+  "life": 0,
+  "high_score": 0,
+  "character_health": 50,
+  "character_speed": 3,
+  "bullet_speed": 3,
+  "bullet_strength": 15,
+  "reload_time": 1000,
+  "magazine": 5,
+  "shooting_speed": 1000,
+  "user_id": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "__v": 0
+}]

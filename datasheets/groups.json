@@ -1,0 +1,262 @@
+[{
+  "_id": {
+    "$oid": "613ffe3531eaf845845df474"
+  },
+  "group_name": "Test1",
+  "owner": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "613eea947b23c9eeb907ec35"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "_id": {
+        "$oid": "6140030231eaf845845df4db"
+      },
+      "made_by": {
+        "$oid": "613ffb7a31eaf845845df45d"
+      },
+      "content": "Hello",
+      "created_at": {
+        "$date": "2021-09-14T02:03:46.117Z"
+      }
+    }
+  ],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "61400eca9b1d0e83b8509cf5"
+  },
+  "group_name": "Class 1",
+  "owner": {
+    "$oid": "61400ea49b1d0e83b8509cea"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "613eea947b23c9eeb907ec35"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "614c1f748c8aa7c83d5fb975"
+      }
+    }
+  ],
+  "posts": [],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "619f4731d2b18a4641580edf"
+  },
+  "group_name": "Decimal_ClassGroup",
+  "owner": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4638d2b18a4641580eaf"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4659d2b18a4641580eb4"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4678d2b18a4641580eb9"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "_id": {
+        "$oid": "61a9c49828114ffd68586adf"
+      },
+      "made_by": {
+        "$oid": "619f46dcd2b18a4641580ec2"
+      },
+      "content": "Hello",
+      "created_at": {
+        "$date": "2021-12-03T07:17:44.455Z"
+      }
+    }
+  ],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "619f47c6d2b18a4641580f0f"
+  },
+  "group_name": "Algebra_ClassGroup",
+  "owner": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4638d2b18a4641580eaf"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4659d2b18a4641580eb4"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4678d2b18a4641580eb9"
+      }
+    }
+  ],
+  "posts": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a9c41228114ffd68586ab8"
+  },
+  "group_name": "Decimal_ClassGroup",
+  "owner": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4638d2b18a4641580eaf"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4659d2b18a4641580eb4"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4678d2b18a4641580eb9"
+      }
+    }
+  ],
+  "posts": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61aebba35f02c9cdc03a11d0"
+  },
+  "group_name": "Class 1",
+  "owner": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4638d2b18a4641580eaf"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4659d2b18a4641580eb4"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "619f4678d2b18a4641580eb9"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "_id": {
+        "$oid": "61aebbb35f02c9cdc03a11e8"
+      },
+      "made_by": {
+        "$oid": "619f46dcd2b18a4641580ec2"
+      },
+      "content": "hwllo",
+      "created_at": {
+        "$date": "2021-12-07T01:41:07.389Z"
+      }
+    }
+  ],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "61dd4b2bd57f0f36f05db735"
+  },
+  "group_name": "Group 1",
+  "owner": {
+    "$oid": "614000fd31eaf845845df4a1"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "614c1f748c8aa7c83d5fb975"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "613eea947b23c9eeb907ec35"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "6166461092913b0970917dbd"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "613ffb7a31eaf845845df45d"
+      }
+    }
+  ],
+  "posts": [],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "61dd4bead57f0f36f05db767"
+  },
+  "group_name": "Group 2",
+  "owner": {
+    "$oid": "614000fd31eaf845845df4a1"
+  },
+  "members": [
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "614c1f748c8aa7c83d5fb975"
+      }
+    },
+    {
+      "is_admin": false,
+      "user_id": {
+        "$oid": "613eea947b23c9eeb907ec35"
+      }
+    }
+  ],
+  "posts": [],
+  "__v": 0
+}]

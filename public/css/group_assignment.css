@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/poppins/Poppins-Regular.ttf);
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+@font-face {
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+::-moz-selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+::selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+.rightbar {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.title-assignment {
+    text-align: center;
+    margin: 0.3em 0 0.6em;
+    margin-top: 50px;
+    /* font-weight: 700; */
+
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+
+    color: #000000;
+
+}
+
+#noresult {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn-wrapper {
+    max-width: 996px;
+    margin: 0 auto;
+}
+
+#assignment-list {
+    max-width: 996px;
+    display: flex;
+    flex-direction: column;
+    margin: 4px auto 14px;
+}
+
+.assignment {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    /* border: 1.4px solid #003844; */
+    /* box-shadow: 3px 5px 1px 0px #eeeeeec2; */
+    border-radius: 15px;
+    margin: 8px 22px;
+    margin-top: 20px;
+    transition: 0.2s ease;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 85%;
+}
+
+.assignment:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.assignment-title {
+    font-weight: 700;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration-line: underline;
+    line-height: 35px;
+}
+
+.assignment-details {
+    display: flex;
+    /* flex-direction: column; */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 36px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.assign-skill {
+    font-size: 12px; 
+    color: #98c5ff;
+    /* color: #003844; */
+    border-radius: 15px;
+    /* background-color: #f3f3f3; */
+    color: #63A6E4;;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 1px 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    transition: 0.2s ease;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    background: #EBF0FF;
+/* identical to box height */
+
+}
+
+.assignment:hover .assign-skill {
+    background-color: #fefae0dd;
+    color: #003844;
+}
+
+.deadline {
+    
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    
+ 
+
+/* identical to box height */
+    color: #1C3148;
+}
+
+#edit-btn {
+    background: #B1DBFF;
+    color: #2A2A72;
+    border-radius: 15px;
+    border: none;
+    margin: 20px 24px 0;
+    padding: 5px 12px;
+    transition: 0.2s ease;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 27px;
+  /* identical to box height */
+    text-align: center;
+    color: #2A2A72;
+}
+
+#edit-btn:hover {
+    background-color: #ef798a;
+    color: #fff;
+    box-shadow: 4px 5px 16px #ef798a55;
+}
+
+
+
+/* NEW ASSIGNMENT MODAL */
+.modal-body {
+    position: relative;
+}
+.close {
+    position: absolute;
+    right: 0;
+    margin: 2px 16px;
+}
+
+.close:focus {
+    box-shadow: none;
+}
+
+#exampleModalLabel {
+
+    margin: 12px 0;
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 54px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e6e6e6;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #e6e6e6;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #e6e6e6;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+.form-control, .form-select {
+    padding: 0.6rem .75rem;
+    font-size: 14px;
+    font-family: "Poppins", "Roboto", "Segoe UI", sans-serif;
+    border-radius: 15px;
+    transition: 0.2s ease;
+
+    background: #E1F1FF;
+    border: 2px solid #6696CA; 
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+}
+
+.col-form-label {
+    padding: 4px 0;
+    font-size: 13px;
+    font-family: "Poppins", "Roboto", "Segoe UI", sans-serif;
+    font-weight: 600;
+}
+
+.topic-input-wrapper {
+    display: none;
+}
+
+.skill-input-wrapper {
+    display: none;
+}
+
+#error {
+    color: #ef798a;
+    font-size: 15px;
+}
+
+#btn-create {
+    border-radius: 15px;
+    color: #fff;
+    
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    /* identical to box height */
+    background: #6696CA;
+    border-radius: 15px;
+}
+
+#btn-create:hover {
+    background-color: #ef798a;
+    color: #fff;
+    box-shadow: 4px 5px 16px #ef798a55;
+}
+
+#btn-create:active {
+    box-shadow: 4px 5px 16px #ef798a22;
+}
+
+.btn-cancel {
+    background: #E22929;
+   
+    border-radius: 15px;
+    padding: none;
+    margin-right: 20px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-cancel:focus {
+    box-shadow: none;
+}
+
+
+/* EDUCATOR VIEW: ASSIGNMENT STATUS FOR EACH STUDENT MEMBER */
+.status-header {
+    margin: 10px 17% 0px 8%;
+    display: flex;
+    font-size: 12px;
+    background: #2A2A72;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.status-header div {
+    width: 25%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    
+    line-height: 27px;
+}
+
+.member-assign-status {
+    border-left: 2px dashed #eee;
+    margin: 0 17% 0px 8%;
+    padding: 8px 12px;
+    /* width: 70%; */
+    font-size: 14px;
+    display: flex;
+    background: #DCEDFD;
+    /* border-radius: 7px; */
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 33px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+.member-assign-status:last-of-type {
+    border-radius: 0px 0px 7px 7px;
+}
+.member-assign-status div {
+    width: 25%;
+}
+
+.link  {
+    cursor: pointer;
+}
+
+.assignment-status {
+    /* display: flex;
+    justify-content: center; */
+    background-color: #f3f8ff;
+    color: #98c5ff;
+    border-radius: 15px;
+    padding: 3px 7px;
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+/* .member-assign-status:hover {
+    background-color: #f3f8ff;
+    color: #98c5ff;
+} */
+
+.status, .score, .time_taken {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ongoing {
+    color: #ffcb45;
+    background-color: #fff6de;
+}
+
+.complete {
+    background-color: #e4fad8;
+    color: #5ba93a;
+    border-radius: 15px;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+    min-width: fit-content;
+}
+
+.uncomplete {
+    background-color: #ffe1e5;
+    color: #ef798a;
+    min-width: fit-content;
+}
+
+.toggleContent {
+    margin: 0 22px 0 0;
+    /* opacity: 0;
+    max-height: 0; */
+    overflow-y: scroll;
+    transition: 0.2s ease-in-out;
+    display: none;
+}
+
+.arrow {
+    transition: 0.1s ease;
+}
+
+.visible {
+    opacity: 1 !important;
+    max-height: 1000px !important;
+    padding-bottom: 8px;
+}
+
+.overdue {
+    color: #FF5A5A;;
+    background-color: #F3C5C5;
+    border-radius: 15px;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+    padding: 1px 50px;
+    min-width: 65px;
+}
+
+
+/* COMPLETED */
+.overdue-list-wrapper, .pending-list-wrapper, .completed-list-wrapper {
+    max-width: 996px;
+    margin: 0 auto;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+
+.tag-container, .tag-container1, .tag-container2 {
+    color: #000000;
+    font-size: 13px;
+    margin: 8px 24px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 36px;
+/* identical to box height */
+}
+
+#pending-list ,#overdue-list, #completed-list {
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    max-height: 0;
+    overflow-y: auto;
+    transition: 0.2s ease-in-out;
+}
+
+.pending {
+    background-color: #EBF0FF; 
+    color: #63A6E4;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+    border-radius: 14px;
+    padding: 1px 50px;
+
+}
+
+
+.completed:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+
+@media (max-width: 768px) {
+    #edit-btn {
+        margin: 8px 10px 0;
+        font-size: 14px;
+    }
+    #assignment-list {
+        margin: 0 0 14px;
+    }
+    .assignment {
+        margin: 8px 8px 0;
+        padding: 14px;
+        font-size: 14px;
+    }
+    .assign-skill {
+        font-size: 11px;
+        margin: 4px 0 0;
+        padding: 2px 6px;
+    }
+    .level, .topicWrapper, .levelForm {
+        width: 95%;
+    }
+
+
+    .member-assign-status  {
+        font-size: 11px;
+        margin: 0 0 2px 16px;
+        padding: 8px 5px;
+    }
+
+    .status-header  {
+        font-size: 10px;
+        margin: 10px 0px 0px 0px;
+        /* padding: 8px; */
+    }
+
+    .assignment-status {
+        font-size: 9px;
+    }
+
+    .tag-container {
+        margin: 8px;
+    }
+}

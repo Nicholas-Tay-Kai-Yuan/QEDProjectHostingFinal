@@ -1,0 +1,204 @@
+[{
+  "_id": {
+    "$oid": "613eea947b23c9eeb907ec35"
+  },
+  "first_name": "Nicholas Tay",
+  "last_name": "Kai Yuan",
+  "email": "kaiyuan@gmail.com",
+  "password": "$2b$10$0gsaIlk2MYkpoYc1OdmbCOHWV1k7gCwVB7m97qYcvOnM9rxXrV1ei",
+  "gender": "M",
+  "role": "student",
+  "created_at": {
+    "$date": "2021-09-13T06:07:16.437Z"
+  },
+  "__v": 0,
+  "exp_points": 520,
+  "grade": 6,
+  "rank_level": 0,
+  "school": "ZHENGHUA PRIMARY SCHOOL",
+  "token": 0
+},{
+  "_id": {
+    "$oid": "613ffb7a31eaf845845df45d"
+  },
+  "first_name": "Admin",
+  "last_name": "Account",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$NckoSLNkm6g6HclTSdByJOoWwPPs7.ufAyslVPLAJCzOeMKe/kDse",
+  "gender": "M",
+  "role": "admin",
+  "created_at": {
+    "$date": "2021-09-14T01:31:38.038Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "614000fd31eaf845845df4a1"
+  },
+  "first_name": "Parent",
+  "last_name": "Account",
+  "email": "parent@gmail.com",
+  "password": "$2b$10$zXdr61CVHJl9KwldPAMpnuT2sNSw5UZHX1qzX6m9FMer4y2uzHQgu",
+  "gender": "M",
+  "role": "parent",
+  "created_at": {
+    "$date": "2021-09-14T01:55:09.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61400ea49b1d0e83b8509cea"
+  },
+  "first_name": "Teacher",
+  "last_name": "Account",
+  "email": "teacher@gmail.com",
+  "password": "$2b$10$7pGDWDIJkbrLwD3jWIOBbek/DyoAbVCt7w8RNqfateFCbFwFP4bAm",
+  "gender": "M",
+  "role": "teacher",
+  "created_at": {
+    "$date": "2021-09-14T02:53:24.142Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "614015d09b1d0e83b8509d2c"
+  },
+  "first_name": "Test",
+  "last_name": "Test",
+  "email": "hello@gmail.com",
+  "password": "$2b$10$xK.ysy91Vzd4MgJJ1SBOs.q8K07x.ByrPg77KkvkIR/lztvLcvwJu",
+  "gender": "M",
+  "role": "student",
+  "school": "ADMIRALTY PRIMARY SCHOOL",
+  "grade": 1,
+  "exp_points": 0,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-09-14T03:24:00.145Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "614c1f748c8aa7c83d5fb975"
+  },
+  "first_name": "kaiyuantwo",
+  "last_name": "Account",
+  "email": "kaiyuan2@gmail.com",
+  "password": "$2b$10$kO6j.phALjUWAJ4z0objdeuNBTLPSAmimGQjWEnBWl04Tces4868K",
+  "gender": "M",
+  "role": "student",
+  "school": "ADMIRALTY PRIMARY SCHOOL",
+  "grade": 1,
+  "exp_points": 975,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-09-23T06:32:20.760Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6166461092913b0970917dbd"
+  },
+  "first_name": "kaiyuanthree",
+  "last_name": "Account",
+  "email": "kaiyuan3@gmail.com",
+  "password": "$2b$10$iGZ/OzYnLfnzdfbcIRnjJ.1jX9jgzuO5Hx5Fhl615MwlMeZTWz2TK",
+  "gender": "M",
+  "role": "student",
+  "school": "ZHENGHUA PRIMARY SCHOOL",
+  "grade": 1,
+  "exp_points": 325,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-10-13T02:36:00.972Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4638d2b18a4641580eaf"
+  },
+  "first_name": "A",
+  "last_name": "student",
+  "email": "studenta@gmail.com",
+  "password": "$2b$10$fLRq6LmSVqqFjqoyOw9JF.C.JxDpmH3oqoaMMZtKVWLzueZy/zzNi",
+  "gender": "M",
+  "role": "student",
+  "school": "ZHENGHUA PRIMARY SCHOOL",
+  "grade": 6,
+  "exp_points": 630,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-11-25T08:15:52.981Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4659d2b18a4641580eb4"
+  },
+  "first_name": "B",
+  "last_name": "student",
+  "email": "studentb@gmail.com",
+  "password": "$2b$10$VzbN8yeN2NUqHaJ/wQh3z.iAoVrHlfZmWH7.TZk4iA9OVomx2BQee",
+  "gender": "M",
+  "role": "student",
+  "school": "ZHENGHUA PRIMARY SCHOOL",
+  "grade": 1,
+  "exp_points": 150,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-11-25T08:16:25.703Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f4678d2b18a4641580eb9"
+  },
+  "first_name": "C",
+  "last_name": "student",
+  "email": "studentc@gmail.com",
+  "password": "$2b$10$yjFlvD8DpabIeUj/dC753eHG9/oD3gTYIOZbmXeDrMcS870.PEXrq",
+  "gender": "M",
+  "role": "student",
+  "school": "ZHENGHUA PRIMARY SCHOOL",
+  "grade": 1,
+  "exp_points": 0,
+  "rank_level": 0,
+  "token": 0,
+  "created_at": {
+    "$date": "2021-11-25T08:16:56.487Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f46dcd2b18a4641580ec2"
+  },
+  "first_name": "Teacher",
+  "last_name": "One",
+  "email": "teacherone@gmail.com",
+  "password": "$2b$10$769QErWDJ9hdIZ5Vju8NsufBQpGn/6hsT4vRPjXK5tC4q8uVO3ow.",
+  "gender": "M",
+  "role": "teacher",
+  "created_at": {
+    "$date": "2021-11-25T08:18:36.272Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619f46f3d2b18a4641580ec7"
+  },
+  "first_name": "Teacher",
+  "last_name": "Two",
+  "email": "teachertwo@gmail.com",
+  "password": "$2b$10$KHfsuLxGBWjemvzgo8pNOOSS4jUu3E8SMjhkK7/ChDHkNeq9WT3sq",
+  "gender": "M",
+  "role": "teacher",
+  "created_at": {
+    "$date": "2021-11-25T08:18:59.737Z"
+  },
+  "__v": 0
+}]

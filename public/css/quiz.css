@@ -1,0 +1,438 @@
+@font-face {
+    font-family: Coolvetica;
+    src: url(fonts/coolvetica/coolvetica_rg.ttf);
+}
+
+@font-face {
+    font-family: Feather;
+    src: url(fonts/feather/feather.ttf);
+}
+
+/* Primary School Container*/
+
+#syllabusContainer {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 35px;
+    /*flex-wrap: wrap;*/
+    margin-bottom: 35px;
+}
+
+#primaryLevelContainer{
+    align-content: center;
+    /* margin-left: 200px; */
+    background: linear-gradient(143.63deg, #7F7FD5 21.2%, #86A8E7 49.7%, #91EAE4 78.8%);
+    border-radius: 15px;
+    width: 330px;
+    height: fit-content;
+}
+
+#primaryimg{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 15px;
+    height: 191px;
+}
+
+.levelNo {
+    width: auto;
+}
+
+.levelName{
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0px;
+    font-family: Feather;
+    color: white;
+}
+
+#levelContainerBackground {
+    align-content: center;
+    margin-top: 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+#levelContainerBackground > p {
+    background-color: #654EA3;
+    border-radius: 15px 15px 0px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #F2F2F2;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#levelContainer{
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #C9B3CE;
+    border-radius: 0px 0px 15px 15px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+/* Secondary School Container*/
+
+#secondaryLevelContainer{
+    align-content: center;
+    /* margin-right: 200px; */
+    border-radius: 15px;
+    background: linear-gradient(148.08deg, #3494E6 19.19%, #EC6EAD 80.81%);
+    width: 330px;
+    height: fit-content;
+}
+
+#levelContainerBackground2 {
+    align-content: center;
+    margin-top: 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+#levelContainerBackground2 > p {
+    background: #81C6ED;
+    border-radius: 15px 15px 0px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #F2F2F2;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#secondaryimg{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 15px;
+    height: 191px;
+}
+
+
+#levelContainer2{
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #E1F1FF;
+    border-radius: 0px 0px 15px 15px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#secondaryDropDown {
+    background: #3DB3FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    width: 100%;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: #F2F2F2;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    text-align: start;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+#title {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+}
+
+#levelTxt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+#skillTxt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 54px;
+    font-weight: 400;
+}
+
+#durationTxt {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+#instructionsHeader {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+#instructionsTxt {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#beginBtn {
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    background: #3DB3FF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+#skillLevel {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+#skillName {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.cancelBtn {
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FDFDFD;
+    background: #AAAAAA;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.submitBtn {     
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FDFDFD;
+    background: #F7C102;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+#scrollQuestions {
+    background: #F0F0F0;
+    box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    height: 30%;
+    overflow-y: scroll;
+}
+
+.question {
+    font-family: Poppins;
+}
+
+#quizMessage {
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 46px;
+}
+
+#scoreMessage {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+#statusMessage {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.quiz-navigation-btn {
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    height: 100%;
+    background: #3DB3FF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+#instagram {
+    height: 100%;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#facebook {
+    height: 100%;
+    background: #4267B2;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#progressText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#primarySchoolCard {
+    border-color: #98C5FF;
+    color: #ffffff;
+    background-color: #98C5FF;
+    border-radius: 15px;
+    display: flex;
+    /* flex: 1; */
+    align-content: flex-start;
+    width: 50%;
+}
+
+#dropdownMenuLink {
+    background: #BC66CA;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    font-family: Feather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: #F2F2F2;
+    text-align: start;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.dropdown-menu.show {
+    display: inline-block;
+    width: auto;
+}
+
+#container2 > div > a {
+    background: #3DB3FF;
+}
+
+.dropDownOptions {
+    border-radius: 7px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+#reviewQuiz {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.btn-outline-primary {
+    border-color: #98C5FF;
+    color: #98C5FF;
+}
+
+.btn-outline-primary:hover {
+    border-color: #ffffff;
+    background-color: #98C5FF;
+    color: #ffffff;
+}
+
+.notAvailable {
+    min-height: 30vh;
+}
+
+.border-round {
+    width: 75%;
+    border-radius: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+.icon-blue {
+    color: #98C5FF;
+    text-shadow: 2px 2px 0px #4842f1;
+}
+
+#instructionsBox {
+    color : #FFFFFF;
+    background-image: linear-gradient(to bottom right,#83A4D4, #B6FBFF);
+}
+
+#opt1, #opt2, #opt3, #opt4, #opt5 {
+    font-size: 18px;
+}
+
+/* #fb-root{
+    font-size: 100px;
+    width: 500px;
+} */
+
+.orderingOptions {
+    border: grey;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .fb-share-button{
+    font-size: 100px;
+    width: 500px;
+} */

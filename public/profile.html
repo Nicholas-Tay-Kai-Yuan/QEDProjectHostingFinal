@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSLEOnline</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css">
+    </link>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+    <!--Google Sign in-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="349801491851-sdb1a38jllrs7vgctmahhmho24tsi36c.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script> 
+
+    <!--Facebook Sign In-->
+     <!--Facebook Sign In-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0&appId=3175042339451827&autoLogAppEvents=1" nonce="TJXfImLC"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+
+    <!--Javascript-->
+    <script src="./javascript/sidebar.js"></script>
+    <script src="./javascript/profile.js"></script>
+    <script src="./javascript/auth.js"></script>
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/topbar.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="sidebar col-auto col-sm-4 col-md-3 col-xl-2 px-0"></div>
+        <div class="rightbar col p-0 content row mx-auto bg-white">
+            <div class="header p-0"></div>
+            <div>
+            <h3 class="title my-4">Profile</h3>
+
+            <div class="frm row mx-auto">
+                <div id='profile-upload'>
+                    <div class="hvr-profile-img">
+                        <input type="file" name="logo" id='getval' class="upload" id="imag">
+                        <div class="icon">
+                            <div class="camera4"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name -->
+            <div class="row mx-auto">
+                <div class="col d-flex justify-content-center mt-4">
+                    <p id="account-fn"></p>&nbsp;
+                    <p id="account-ln"></p>&nbsp;
+                    <i class="fas fa-pen" id="editName" data-bs-toggle="modal" data-bs-target="#editNameModal"></i>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="row mx-auto">
+                <div class="form-group">
+                    <input type="email" id="account-email" value="daniel.adams@example.com" disabled="">
+                </div>
+            </div>
+
+            <div class="expContainer col-md-7 mx-auto mt-3 mb-2">
+                <p id="rankLevel"></p>
+                <div class="expBar" id="expBar">
+                    <div class="exp"></div>
+                </div>
+                <p id="expLevel"></p>
+            </div>
+
+            <div class="col-md-6 mx-auto d-flex justify-content-center">
+                <div class="form-group" id="account-gender">
+                    <label for="account-gender">Gender</label>
+                    <br>
+
+                    <div class="form-check form-check-inline ms-4 mx-auto">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="M" checked>
+                        <label class="form-check-label" for="inlineRadio1">M</label>
+                    </div>
+                    <div class="form-check form-check-inline ms-4 mx-auto">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="F">
+                        <label class="form-check-label" for="inlineRadio2">F</label>
+                    </div>
+                </div>
+            </div>
+
+            <p class="small text-danger" id="err"></p>
+            <!-- Grade, School & Role -->
+            <div class="col-md-7 mx-auto">
+                <div class="form-group">
+                    <select class="form-select" id="levelOption">
+                        <option value="1">Primary 1</option>
+                        <option value="2">Primary 2</option>
+                        <option value="3">Primary 3</option>
+                        <option value="4">Primary 4</option>
+                        <option value="5">Primary 5</option>
+                        <option value="6">Primary 6</option>
+                    </select>
+                    <select class="form-select" id="schoolOption"></select>
+                    <select class="form-select" id="account-role" disabled>
+                        <option value="parent">Parent</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Save Button -->
+            <div class="col-3 mx-auto">
+                <!-- <hr class="mt-2 mb-3"> -->
+                <!-- <div class="d-flex flex-wrap justify-content-between align-items-center"> </div> -->
+                <button class="btn btn-style-1 btn-primary" type="button" data-toast="" id="updateBtn"
+                    data-toast-position="topRight">Submit Changes</button>
+            </div>
+
+            </div>
+
+            <div>
+                <h3 class="title" id="notiTitle">Notifications</h3>
+                <div class="mb-3 row">
+                    <div class="col d-flex justify-content-center" id="notificationsContent">
+                        <label class="form-check-label" for="exampleCheck1">Allow Email Notifications</label>
+                        <input type="checkbox" class="form-check-input d-inline-block" id="exampleCheck1">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="title" id="otherTitle">Others</h3>
+                <div class="row">
+                    <div class="col-3 mx-auto">
+                        <a href="resetPassword.html" class="text-decoration-none">
+                            <button class="btn btn-primary" id="changePwdBtn">Change Password</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mx-auto">
+                        <button class="btn btn-primary" id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mx-auto">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" id="deleteButton">Delete Account</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- School -->
+            <!-- <div class="col-md-6 mx-auto">
+                <div class="form-group">
+                    <select class="form-select" id="schoolOption"></select>
+                </div>
+            </div> -->
+
+
+
+
+
+            <script src="./javascript/settings.js"></script>
+
+
+
+
+            <div class="test">
+                <!-- <div class="col-md-3">
+
+            <div href=# class="d-inline"><img src="./images/cat.png " width=130px>
+                <br>
+                <p class="pl-2 mt-4"><a href="#" class="btn" style="color:black">Edit Picture</a></p>
+            </div>
+
+
+        </div> -->
+
+
+                <!-- <p class="small text-danger" id="err"></p>
+
+                <div class="col-lg-8 pb-5">
+                    <form class="row"> -->
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-fn">First Name</label>
+                        <input class="form-control" type="text" id="account-fn" value="Daniel" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-ln">Last Name</label>
+                        <input class="form-control" type="text" id="account-ln" value="Adams" required="">
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-dob">Date of Birth</label>
+                        <input class="form-control" type="date" id="account-ln" value="23.09.2010" required="">
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-phone">Phone Number</label>
+                        <input class="form-control" type="text" id="account-phone" value="+7 (805) 348 95 72"
+                            required="">
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="levelOption">Grade</label>
+                                <select class="form-select" id="levelOption">
+                                    <option value="1">Primary 1</option>
+                                    <option value="2">Primary 2</option>
+                                    <option value="3">Primary 3</option>
+                                    <option value="4">Primary 4</option>
+                                    <option value="5">Primary 5</option>
+                                    <option value="6">Primary 6</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="account-gender">Gender</label>
+                                <br>
+
+                                <div class="form-check form-check-inline ms-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="M" checked>
+                                    <label class="form-check-label" for="inlineRadio1">M</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="F">
+                                    <label class="form-check-label" for="inlineRadio2">F</label>
+                                </div>
+                            </div>
+                        </div> -->
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-email">Email</label>
+                        <input class="form-control" type="email" id="account-email" value="daniel.adams@example.com"
+                            disabled="">
+                    </div>
+                </div> -->
+
+
+                <!-- <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="schoolOption">School</label>
+                                <select class="form-select" id="schoolOption"></select>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="account-role">Role</label>
+                                <select class="form-select" id="account-role">
+                                    <option value="parent">Parent</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="student">Student</option>
+                                </select>
+
+
+
+                            </div>
+                        </div> -->
+
+                <!-- <div class="col-192">
+                            <hr class="mt-2 mb-3">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center"> </div>
+                            <button class="btn btn-style-1 btn-primary" type="button" data-toast="" id="updateBtn"
+                                data-toast-position="topRight">Edit</button>
+                        </div> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="editNameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modalHeader p-3">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Name</h5>
+                    <button type="button" class="close d-flex" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <input type="text" class="form-control" id="accountFn" placeholder="First Name" required>
+                        <input type="text" class="form-control" id="accountLn" placeholder="Last Name" required>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="editBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+   
+      
+      <!-- Modal -->
+      <div class="modal fade" id="editNameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Name</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="accountFn" placeholder="First Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="accountLn" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="row mt-4" id="errorForm">
+                        <p class="m-0" id="errorFeedback">*Make sure all the fields are filled up</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="editBtn">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete  your account?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="deleteBtn">Delete</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>

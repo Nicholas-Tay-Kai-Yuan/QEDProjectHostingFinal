@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+::-moz-selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+::selection {
+    color: #003844;
+    background-color: #ffcb45;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+}
+
+#added-list {
+    scroll-behavior: smooth;
+    background: #E9E7FA;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+}
+
+::-webkit-scrollbar-track {
+    background: hsla(0,0%,100%,.1);
+}
+
+.rightbar {
+    position: relative;
+}
+
+#edit-btn {
+    background-color: #ffcb45;
+    border-radius: 25px;
+    position: fixed;
+    right: 0;
+    /* bottom: 0; */
+    top: 82vh;
+    margin: 24px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fefae0;
+    cursor: pointer;
+    box-shadow: 3px 10px 20px rgba(59, 59, 59, 0.1);
+    transition: 0.2s ease;
+}
+
+#edit-btn:hover {
+    color: #003844;
+    box-shadow: 3px 10px 20px #ffcb4577;
+}
+
+#member-list {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 15px;
+}
+
+#owner, #parent, #teacher, #student {
+    margin: 0 40px;
+    padding: 14px 0;
+}
+
+.list-header {
+    padding: 6px 0;
+    border-bottom: 1.4px solid #eee;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    cursor: pointer;
+}
+
+#student-count, #parent-count, #teacher-count {
+    overflow: visible;
+    word-wrap: none;
+    margin-left: 5px;
+    font-family: Feather;
+    font-weight: bold;
+}
+
+.member-img {
+    width: 1.3rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+.member {
+    padding: 6px 8px;
+    margin: 10px 0px;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.member:hover {
+    background-color: #eaf3ff;
+    color: #98c5ff;
+}
+
+.admin-tag {
+    border: 1px solid #ef798a;
+    color: #ef798a;
+    padding: 2px 8px;
+    font-size: 11px;
+    border-radius: 15px;
+    margin-left: 10px;
+    transition: 0.2s ease;
+}
+
+.member:hover .admin-tag {
+    border: 1px solid #ef798a;
+    background-color: #ef798a;
+    color: #fff;
+}
+
+.member-role {
+    font-family: Feather;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.btn-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#leaveGrpToggle {
+    border-color: #ef798a;
+    color: #ef798a;
+    border-radius: 15px;
+    margin: 10px 40px 24px;
+    width: calc(100% - 80px);
+}
+
+#leaveGrpToggle:hover {
+    border-color: #ef798a;
+    background-color: #ef798a;
+    color: #fff;
+    box-shadow: 4px 5px 16px #ef798a55;
+}
+
+#leaveGrpToggle:focus {
+    border-color: #ef798a;
+    background-color: #ef798a;
+    color: #fff;
+    box-shadow: 4px 5px 16px #ef798a55;
+}
+
+@media (max-width: 576px) {
+    #owner, #parent, #teacher, #student {
+        margin: 0 14px;
+    }
+}
+
+/* MANAGE GROUP MODAL */
+
+button .icon {
+    height: 20px;
+    max-width: 20px;
+    vertical-align: middle;
+  }
+
+  .camera4{
+    display:block;
+    width:25%;
+    height:17%;
+    position:absolute;
+    top: 42%;
+    left: 38%;
+    background-color:#000;
+    border-radius:5px;
+  }
+  
+  .camera4:after{
+    content:"";
+    display:block;
+    width:15px;
+    height:15px;
+    border:7px solid #fff;
+    position:absolute;
+    top:15%;
+    left:25%;
+    background-color:#000;
+    border-radius:15px;
+  }
+  
+  
+  .camera4:before{
+    content:"";
+    display:block;
+    width:50%;
+    height:10px;
+    position:absolute;
+    top:-16%;
+    left:25%;
+    background-color:#000;
+    border-radius:10px;
+  }
+
+  
+
+  #group-member-upload:hover input.upload{
+    display:block;
+  }
+  #group-member-upload:hover {
+    border: 1px solid gray
+  }
+  #group-member-upload:hover .hvr-profile-img{
+    opacity:1;
+   }
+  .hvr-profile-img{opacity:.3;}
+  
+  #group-member-upload input.upload {
+    z-index:1;
+    left: 0;
+    margin: 0;
+    bottom: 0;
+    top: 0;
+    padding: 0;
+    opacity: 0;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+ 
+    width:100%;
+    display:none;
+}
+
+.group-member-upload{
+    justify-content: center;
+    align-content: center;
+  }
+
+  #group-member-upload{
+    background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 200px; 
+    width: 200px;
+    border: 1px solid #bbb;
+    position:relative;
+    border-radius:50%;
+    overflow:hidden;
+    /* float:left; */
+    /* margin: 0 auto; */
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 130px;
+  }
+
+  .btn-primary{
+    font-family: feather;
+    border: none;
+    border-radius: 8px;
+    background-color: #83CFFF;
+    margin-top: 25px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.20), inset 0px -1px 1px rgba(0, 0, 0, 0.20);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #showText,#successText {
+    display: none;
+    font-family: Coolvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #003844;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+
+#exampleModalLabel {
+    margin-bottom: 16px;
+    font-family: Coolvetica;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.modal-body {
+    padding: 1.3rem;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    margin: 8px;
+}
+
+.close:focus {
+    box-shadow: none;
+}
+
+.form-control-plaintext:focus {
+    outline: none;
+}
+
+.form-control, .form-select {
+    padding: 0.6rem .75rem;
+    font-size: 14px;
+    font-family: Poppins;
+    background: #E1F1FF;
+    border: 1px solid #A7BFE8;
+    box-sizing: border-box;
+    border-radius: 7px;
+    transition: 0.2s ease;
+}
+
+.form-control-plaintext {
+    font-size: 14px;
+    font-family: "Poppins", "Roboto", "Segoe UI", sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #fff;
+    border-color: #e9e9e9;
+    box-shadow: none;
+}
+
+.col-form-label {
+    padding: 4px 0;
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 700;
+    color: #3F5C94;
+}
+
+.edit-name-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-name {
+    cursor: pointer;
+    color: #ffcb45;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.modal-label {
+    margin: 10px 2px 0;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.group-name-wrapper {
+    position: relative;
+}
+
+#check-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 0.6rem .75rem;
+    font-size: 1rem;
+    color: #003844;
+    display: none;
+    transition: 0.2s ease;
+    line-height: 1.4rem;
+}
+
+
+/* POPOVER CONTENT */
+.popover_wrapper {
+    position: relative;
+}
+
+.popover_content {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translate(0, 10px);
+    background-color: #fff;
+    border: 1px solid #f5efcb;
+    transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    z-index: 10;
+}
+
+.display_popover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0px);
+}
+
+#search-list {
+    color: #003844;
+    border-radius: 15px;
+    background-color:#E9E7FA;
+}
+
+.result:first-child {
+    border-radius: 15px 15px 0 0;
+}
+
+.result:last-child {
+    border-radius: 0 0 15px 15px;
+    border: none;
+}
+
+.result {
+    cursor: pointer;
+    padding: 8px 5px;
+    border-bottom: 1px solid #f5efcb;
+    transition: 0.2s ease;
+}
+
+.result:hover {
+    background-color: rgb(179, 175, 212);
+}
+
+.member-name {
+    /* font-weight: 500; */
+    font-size: 14px;
+    font-family: Poppins;
+}
+
+.email {
+    font-size: 13px;
+    color: #17505d;
+}
+
+.modal-pfp {
+    width: 30px;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+
+}
+
+/* ADDED MEMBERS LIST */
+
+#added-list {
+    color: #003844;
+    margin-top: 5px;
+    max-height: 170px;
+    overflow-y: scroll;
+}
+
+.list-member {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    transition: 0.2s ease-in-out;
+}
+
+.list-member:hover {
+    background-color: rgb(179, 175, 212);
+}
+
+.list-member:hover .edit-member {
+    color: #17505d;
+    display: flex;
+}
+
+.member-details {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.list-member:hover .admin-tag-modal {
+    background-color: #003844;
+    border-color: #003844;
+    color: #fff;
+}
+.admin-tag-modal {
+    border: 1px solid #ffcb45;
+    border-radius: 15px;
+    color: #ffcb45;
+    padding: 1px 6px;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-member {
+    cursor: pointer;
+    width: 5%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-member:focus {
+    display: flex;
+}
+
+.remove-member {
+    color: #ddd;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.remove-member:hover {
+    cursor: pointer;
+    color: #003844;
+}
+
+.added-name {
+    font-weight: 700;
+    font-family: Feather;
+}
+
+.added-email, .added-role {
+    font-weight: 400;
+    font-family: Poppins;
+}
+
+#updateGroup {
+    border-color: #ffcb45;
+    color: #ffcb45;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+#updateGroup:hover {
+    background-color: #ffcb45;
+    color: #003844;
+}
+
+.btn-delete {
+    background: #FFC83C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #ef798a;
+    color: #fff;
+    box-shadow: 4px 5px 16px #ef798a55;
+}
+
+.btn-delete:focus {
+    box-shadow: 0px 0px 0px 4px #ef798b8b !important;
+}
+
+
+#error {
+    color: #ef798a;
+}
+
+/* MEMBER ELlIPSIS DROPDOWN */
+
+.dropdown-menu {
+    font-size: 14px !important;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    padding: 0.15em 0.7em;
+}
+
+.dropdown-item:active {
+    background-color: #ffcb45;
+}
+
+
+
+/* CONFIRM DELETE GROUP MODAL */
+#warning-icon {
+    color: #ef798a;
+    margin-bottom: 12px;
+    font-size: 32px;
+}

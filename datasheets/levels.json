@@ -1,0 +1,659 @@
+[{
+  "_id": {
+    "$oid": "611c81012b391f2770603e87"
+  },
+  "education": "Primary",
+  "level": 1,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2770603e9b"
+      },
+      "topic_name": "Fractions",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61a9b151ff5a0440f08c6b33"
+          },
+          "skill_code": "FRAC_ADD",
+          "skill_name": "Addition of Fractions",
+          "num_of_qn": 20,
+          "percent_difficulty": "50-30-20",
+          "duration": 20,
+          "easy_values": {
+            "min": 1,
+            "max": 5
+          },
+          "medium_values": {
+            "min": 6,
+            "max": 10
+          },
+          "difficult_values": {
+            "min": 11,
+            "max": 20
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61d5036efe3a0730601f5989"
+          },
+          "skill_code": "FRAC_SIMPLIFY",
+          "skill_name": "Simplifying Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "50-40-10",
+          "duration": 10,
+          "easy_values": {
+            "min": 1,
+            "max": 10
+          },
+          "medium_values": {
+            "min": 11,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 21,
+            "max": 30
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2770603e88"
+  },
+  "education": "Primary",
+  "level": 2,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2770603e9b"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2770603e89"
+  },
+  "education": "Primary",
+  "level": 3,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2770603e9b"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2770603e90"
+  },
+  "education": "Primary",
+  "level": 4,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2770603e9b"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2770603e99"
+  },
+  "education": "Primary",
+  "level": 5,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2770603e9a"
+      },
+      "topic_name": "Fractions",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "611c81012b391f2770603e9b"
+          },
+          "skill_code": "FRAC_SIMPLIFY",
+          "skill_name": "Simplifying Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "30-50-20",
+          "duration": 20,
+          "easy_values": {
+            "min": 1,
+            "max": 10
+          },
+          "medium_values": {
+            "min": 10,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 20,
+            "max": 30
+          }
+        },
+        {
+          "_id": {
+            "$oid": "611c81012b391f2770603e9c"
+          },
+          "skill_code": "FRAC_ADD",
+          "skill_name": "Addition of Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "30-50-20",
+          "duration": 20,
+          "easy_values": {
+            "min": 1,
+            "max": 10
+          },
+          "medium_values": {
+            "min": 10,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 20,
+            "max": 30
+          }
+        },
+        {
+          "_id": {
+            "$oid": "611c81012b391f2770603e9d"
+          },
+          "skill_code": "FRAC_MULTIPLY",
+          "skill_name": "Multiplication of Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "30-50-20",
+          "duration": 20,
+          "easy_values": {
+            "min": 1,
+            "max": 10
+          },
+          "medium_values": {
+            "min": 10,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 20,
+            "max": 30
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2770603e91"
+  },
+  "education": "Primary",
+  "level": 6,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "61e76e54858c93be2047aa2a"
+      },
+      "topic_name": "Approximation",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e76e8f858c93be2047aa3b"
+          },
+          "skill_code": "ROUND_OFF",
+          "skill_name": "Rounding off",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "61e76e64858c93be2047aa2e"
+      },
+      "topic_name": "Ordering Numbers",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e76eb5858c93be2047aa3f"
+          },
+          "skill_code": "ORDER_NUM",
+          "skill_name": "Ordering Numbers",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "61e76e71858c93be2047aa32"
+      },
+      "topic_name": "Real Numbers",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e76ed5858c93be2047aa43"
+          },
+          "skill_code": "RATIONAL_NUM",
+          "skill_name": "Rational Numbers",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "61e76e7a858c93be2047aa36"
+      },
+      "topic_name": "Integers",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e76eef858c93be2047aa47"
+          },
+          "skill_code": "INTEGERS_ADD_SUB",
+          "skill_name": "Integers",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    }
+  ],
+  "__v": 9
+},{
+  "_id": {
+    "$oid": "611c81012b391f2771603e91"
+  },
+  "education": "Secondary",
+  "level": 7,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "61e8f2b8e2403abc687f9c3d"
+      },
+      "topic_name": "Decimals",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e8f38ce2403abc687f9c52"
+          },
+          "skill_code": "DECIMAL_ROUNDING_OFF",
+          "skill_name": "Rounding off_Decimals",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f3b5e2403abc687f9c59"
+          },
+          "skill_code": "DECIMAL_ADDITION_SUBTRACTION",
+          "skill_name": "Addition_Subtraction_Decimals",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f3dfe2403abc687f9c5f"
+          },
+          "skill_code": "DECIMAL_MULTIPLICATION",
+          "skill_name": "Multiplication_Decimals",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f3fae2403abc687f9c65"
+          },
+          "skill_code": "DECIMAL_DIVISION",
+          "skill_name": "Division_Decimals",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "61e8f2c2e2403abc687f9c43"
+      },
+      "topic_name": "Algebra",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e8f4c5e2403abc687f9c87"
+          },
+          "skill_code": "ALGEBRA_ADDITION",
+          "skill_name": "Addition_Algebra",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f4fae2403abc687f9c8d"
+          },
+          "skill_code": "ALGEBRA_MULTIPLICATION",
+          "skill_name": "Multiplication_Algebra",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f531e2403abc687f9c93"
+          },
+          "skill_code": "ALGEBRA_DIVISION",
+          "skill_name": "Division_Algebra",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f54fe2403abc687f9c99"
+          },
+          "skill_code": "ALGEBRA_EXPANSION",
+          "skill_name": "Expansion_Algebra",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f588e2403abc687f9c9f"
+          },
+          "skill_code": "ALGEBRA_LINEAR_EQUATION",
+          "skill_name": "Linear_Equation_Algebra",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 0,
+            "max": 0
+          },
+          "medium_values": {
+            "min": 0,
+            "max": 0
+          },
+          "difficult_values": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "61e8f5c8e2403abc687f9cae"
+      },
+      "topic_name": "Fractions",
+      "skills": [
+        {
+          "_id": {
+            "$oid": "61e8f69ee2403abc687f9cb7"
+          },
+          "skill_code": "FRAC_SIMPLIFY",
+          "skill_name": "Simplify_Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 1,
+            "max": 20
+          },
+          "medium_values": {
+            "min": 1,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 1,
+            "max": 20
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f6d2e2403abc687f9cbd"
+          },
+          "skill_code": "FRAC_ADD",
+          "skill_name": "Addition_Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 1,
+            "max": 20
+          },
+          "medium_values": {
+            "min": 1,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 1,
+            "max": 20
+          }
+        },
+        {
+          "_id": {
+            "$oid": "61e8f709e2403abc687f9cc3"
+          },
+          "skill_code": "FRAC_MULTIPLY",
+          "skill_name": "Multiplication_Fractions",
+          "num_of_qn": 10,
+          "percent_difficulty": "40-30-30",
+          "duration": 10,
+          "easy_values": {
+            "min": 1,
+            "max": 20
+          },
+          "medium_values": {
+            "min": 1,
+            "max": 20
+          },
+          "difficult_values": {
+            "min": 1,
+            "max": 20
+          }
+        }
+      ]
+    }
+  ],
+  "__v": 18
+},{
+  "_id": {
+    "$oid": "611c81012b391f2754603e91"
+  },
+  "education": "Secondary",
+  "level": 8,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81015b391f2770673e9c"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f2772643e91"
+  },
+  "education": "Secondary",
+  "level": 9,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2774603e9c"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "611c81012b391f1774602e94"
+  },
+  "education": "Secondary",
+  "level": 10,
+  "topics": [
+    {
+      "_id": {
+        "$oid": "611c81012b391f2771603e9c"
+      },
+      "topic_name": "Fractions",
+      "skills": []
+    }
+  ]
+}]
