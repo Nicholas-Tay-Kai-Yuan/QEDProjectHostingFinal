@@ -74,7 +74,7 @@ let attribute = {
     grade: () => {
         return body("grade")
             .optional()
-            .isInt({ min: 1, max: 6 }).withMessage("Grade must be a number from 1 to 6").bail()
+            .isInt({ min: 1, max: 10 }).withMessage("Grade must be a number from 1 to 6").bail()
             .toInt()
     },
 
