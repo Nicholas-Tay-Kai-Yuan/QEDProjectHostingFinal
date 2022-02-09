@@ -187,6 +187,7 @@ $(document).on("click", ".click", function () {
         //Start quiz
         questionArray = [];
         funcs[quizData.topic_name].generateQuestion(quizData);
+        console.log(questionArray)
         displayQuestion();
     } else {
         // Submit quiz
@@ -1795,11 +1796,14 @@ const algebra2 = {
                 alphabet += possible.charAt(
                     Math.floor(Math.random() * possible.length)
                 );
+               
 
                 let firstNumberqn = Math.floor(Math.random() * 9 + 2);
                 let secondNumberqn = Math.floor(Math.random() * 9 + 2);
                 let firstpower = Math.floor(Math.random() * 9) + 1;
                 let secondpower = Math.floor(Math.random() * 9) + 1;
+
+               
 
                 let firstNumberans;
                 let secondNumberans;
@@ -1898,11 +1902,47 @@ const algebra2 = {
                 ansTerm1 = ansTerm1.replace("^", "");
                 ansTerm2 = ansTerm2.replace("^", "");
 
+                //answer type 2
+                let answer2;
+                if(ansTerm1.indexOf(alphabet)!=-1){//alphabet exists in term 1
+                    if(ansTerm2==1){
+                        answer2=ansTerm1;
+                    }else{
+                        if(ansTerm1.indexOf(alphabet)!=0){
+                            answer2=ansTerm1.slice(0,ansTerm1.indexOf(alphabet))+ "\n" +ansTerm2+ "\n" +ansTerm1.slice(ansTerm1.indexOf(alphabet))
+                        }else{
+                            answer2=1+"\n"+ansTerm2+"\n"+ansTerm1
+                        }
+                    }
+
+
+                }else{//alphabet exists in term 2
+                    if(ansTerm2.indexOf(alphabet)!=0){
+                        answer2=ansTerm1+ "\n" +ansTerm2.slice(0,ansTerm2.indexOf(alphabet))+ "\n" + (ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+
+                    }else{
+                        if(ansTerm1==1){
+                            answer2=(ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+                        }else{
+                            answer2=ansTerm1+(ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+                        }
+
+                    }
+
+                }
+
+                //check -1 power
+                if(answer2.charAt(answer2.length-1)=="-"){
+                    answer2=answer2+"1";
+                }
+
                 let algebraQn;
                 if (ansTerm2 == 1) {
                     algebraQn = {
                         qn: qnTerms1 + "/" + qnTerms2,
                         ans: ansTerm1,
+                        ans2:answer2,
+                        alphabetData:alphabet,
                         type: "easy",
                         QnNumerator: qnNumerator,
                         QnNumeratorPower: qnNumeratorPower,
@@ -1918,6 +1958,8 @@ const algebra2 = {
                     algebraQn = {
                         qn: qnTerms1 + "/" + qnTerms2,
                         ans: ansTerm1 + "\n" + ansTerm2,
+                        ans2:answer2,
+                        alphabetData:alphabet,
                         type: "easy",
                         QnNumerator: qnNumerator,
                         QnNumeratorPower: qnNumeratorPower,
@@ -2249,11 +2291,55 @@ const algebra2 = {
 
                 ansTerm1 = ansTerm1.replace("^", "");
                 ansTerm2 = ansTerm2.replace("^", "");
+
+
+
+
+                 //answer type 2
+                 let answer2;
+                 if(ansTerm1.indexOf(alphabet)!=-1){//alphabet exists in term 1
+                     if(ansTerm2==1){
+                         answer2=ansTerm1;
+                     }else{
+                         if(ansTerm1.indexOf(alphabet)!=0){
+                             answer2=ansTerm1.slice(0,ansTerm1.indexOf(alphabet))+ "\n" +ansTerm2+ "\n" +ansTerm1.slice(ansTerm1.indexOf(alphabet))
+                         }else{
+                             answer2=1+"\n"+ansTerm2+"\n"+ansTerm1
+                         }
+                     }
+ 
+ 
+                 }else{//alphabet exists in term 2
+                     if(ansTerm2.indexOf(alphabet)!=0){
+                         answer2=ansTerm1+ "\n" +ansTerm2.slice(0,ansTerm2.indexOf(alphabet))+ "\n" + (ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+ 
+                     }else{
+                         if(ansTerm1==1){
+                             answer2=(ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+                         }else{
+                             answer2=ansTerm1+(ansTerm2.slice(ansTerm2.indexOf(alphabet))).replace(alphabet,alphabet+"-")
+                         }
+ 
+                     }
+ 
+                 }
+ 
+                 //check -1 power
+                 if(answer2.charAt(answer2.length-1)=="-"){
+                     answer2=answer2+"1";
+                 }
+                 answer2=answer2.replace("-1"+alphabet,"-"+alphabet)
+
+                 //add 1 to -1
+                 answer2=answer2.replace("-\n","-1\n")
+
                 let algebraQn;
                 if (ansTerm2 == 1) {
                     algebraQn = {
                         qn: qnTerms1 + "/" + qnTerms2,
                         ans: ansTerm1,
+                        ans2:answer2,
+                        alphabetData:alphabet,
                         type: "medium",
                         QnNumerator: qnNumerator,
                         QnNumeratorPower: qnNumeratorPower,
@@ -2269,6 +2355,8 @@ const algebra2 = {
                     algebraQn = {
                         qn: qnTerms1 + "/" + qnTerms2,
                         ans: ansTerm1 + "\n" + ansTerm2,
+                        ans2:answer2,
+                        alphabetData:alphabet,
                         type: "medium",
                         QnNumerator: qnNumerator,
                         QnNumeratorPower: qnNumeratorPower,
@@ -3750,6 +3838,7 @@ const algebra2 = {
             //console.log(document.getElementsByClassName("math-field mq-editable-field mq-math-mode")[i].innerText)
 
             let input;
+            
 
             if (quizData.skill_code == "ALGEBRA_MULTIPLICATION") {
                 input =
@@ -3778,6 +3867,13 @@ const algebra2 = {
                     input = input.slice(0, -1);
                     input = input.slice(0, -1);
                 }
+                //ans2 check
+                
+                if((input == questionArray[i].ans)==false){//not first answer
+                    if(/[-0-9]/.test(input.charAt(input.indexOf(questionArray[i].alphabetData)-1)) == false && input.indexOf(questionArray[i].alphabetData)!=0)
+                    input=input.replace(input.charAt(input.indexOf(questionArray[i].alphabetData)-2)+input.charAt(input.indexOf(questionArray[i].alphabetData)-1),"\n")
+                }
+               
             } else if (quizData.skill_code == "ALGEBRA_LINEAR_EQUATION") {
                 input =
                     "ans" in questionArray[i]
@@ -3804,15 +3900,39 @@ const algebra2 = {
             //let input = ('ans' in questionArray[i]) ? $(`#input${i}`).val() : undefined;
 
             //let input = ('ans' in questionArray[i]) ? document.getElementsByClassName("math-field mq-editable-field mq-math-mode")[i].innerText : undefined;
+            //debugging notes
+            
             console.log(
                 document.getElementsByClassName(
                     "math-field mq-editable-field mq-math-mode"
                 )
             );
+            /*
             console.log(input == questionArray[i].ans);
             console.log(input);
 
-            console.log(questionArray[i].ans);
+            console.log(questionArray[i].ans2);
+            console.log(input == questionArray[i].ans2)
+            console.log(input.indexOf(questionArray[i].alphabetData)==0)
+            console.log("important")
+            console.log(input.charAt(2))
+            console.log(input.charAt(3))//delete this
+            console.log(input.charAt(4))//delte this
+            console.log(input.charAt(3))//delete this
+            console.log(input.charAt(5))//alphabet
+            
+            console.log("input string")
+            for(let iv1=0;iv1<input.length;iv1++){
+                console.log(input[iv1])
+
+            }
+            console.log("questionArray[i].ans2")
+            for(let iv2=0;iv2<questionArray[i].ans2.length;iv2++){
+                console.log(questionArray[i].ans2[iv2])
+
+            }*/
+
+            
 
             //console.log((/[a-z0-9]/).test(input.charAt(input.length-1)))
 
@@ -3826,7 +3946,7 @@ const algebra2 = {
                 input == questionArray[i].ans3 ||
                 input == questionArray[i].ans4 ||
                 input == questionArray[i].ans5 ||
-                input == questionArray[i].ans6
+                input == questionArray[i].ans6  
             ) {
                 if (i < numOfEasy) {
                     difficulty = "easy";

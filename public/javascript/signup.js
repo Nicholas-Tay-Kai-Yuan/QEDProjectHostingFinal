@@ -129,6 +129,10 @@ $(document).on("change", "#role", function () {
                     <option value="4">Primary 4</option>
                     <option value="5">Primary 5</option>
                     <option value="6">Primary 6</option>
+                    <option value="1">Secondary 1</option>
+                    <option value="2">Secondary 2</option>
+                    <option value="3">Secondary 3</option>
+                    <option value="4">Secondary 4</option>
                 </select>
             </div>
             <div class="mt-2">
@@ -288,6 +292,29 @@ function getSchool() {
             console.log(errorThrown);
         }
     });
+
+    //sec school
+    let data2 = {
+        resource_id: 'ede26d32-01af-4228-b1ed-f05c45a1d8ee', // the resource id
+        q: 'secondary', // query for 'primary'
+        limit: 200 // Recieving limit
+    };
+    $.ajax({
+        url: 'https://data.gov.sg/api/action/datastore_search',
+        data: data2,
+        dataType: 'JSON',
+        success: function (data2, textStatus, xhr) {
+            for (let i = 0; i < data2.result.records.length; i++) {
+                schoolOption += `<option value='${data2.result.records[i].school_name}'>${data2.result.records[i].school_name}</option>`;
+            }
+            $('#role').trigger("change");
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+
+
 }
 
 function tokenExist(){
