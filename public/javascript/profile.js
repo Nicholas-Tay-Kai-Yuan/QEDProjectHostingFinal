@@ -354,6 +354,27 @@ function getSchool() {
             console.log(errorThrown);
         },
     });
+
+     //sec school
+     let data2 = {
+        resource_id: 'ede26d32-01af-4228-b1ed-f05c45a1d8ee', // the resource id
+        q: 'secondary', // query for 'primary'
+        limit: 200 // Recieving limit
+    };
+    $.ajax({
+        url: 'https://data.gov.sg/api/action/datastore_search',
+        data: data2,
+        dataType: 'JSON',
+        success: function (data2, textStatus, xhr) {
+            for (let i = 0; i < data2.result.records.length; i++) {
+                schoolOption += `<option value='${data2.result.records[i].school_name}'>${data2.result.records[i].school_name}</option>`;
+            }
+            $('#role').trigger("change");
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    });
 }
 
 function updateAccount(data) {
