@@ -187,7 +187,7 @@ $(document).on("click", ".click", function () {
         //Start quiz
         questionArray = [];
         funcs[quizData.topic_name].generateQuestion(quizData);
-        console.log(questionArray)
+        //console.log(questionArray)
         displayQuestion();
     } else {
         // Submit quiz
@@ -409,8 +409,8 @@ function getQuizAjax(path, id) {
 }
 
 function submitQuiz(newQuiz) {
-    console.log("welp");
-    console.log(newQuiz);
+    //console.log("welp");
+    //console.log(newQuiz);
     $.ajax({
         url: `quiz`,
         type: "POST",
@@ -440,8 +440,8 @@ function submitQuiz(newQuiz) {
             }
         },
         error: function (xhr, textStatus, errorThrown) {
-            console.log(xhr);
-            console.log("fail quiz");
+            //console.log(xhr);
+            //console.log("fail quiz");
         },
     });
 }
@@ -1299,7 +1299,7 @@ const algebra2 = {
 
                 const patternNumber = Math.floor(Math.random() * 3 + 1);
                 if (patternNumber == 1) {
-                    console.log("1");
+                    //console.log("1");
                     const qnTerms =
                         firstNumber +
                         alphabet1 +
@@ -1322,7 +1322,7 @@ const algebra2 = {
                     };
                     questionArray.push(algebraQn);
                 } else if (patternNumber == 2) {
-                    console.log("2");
+                    //console.log("2");
                     const qnTerms =
                         firstNumber +
                         alphabet1 +
@@ -1345,7 +1345,7 @@ const algebra2 = {
                     };
                     questionArray.push(algebraQn);
                 } else if (patternNumber == 3) {
-                    console.log("3");
+                    //console.log("3");
                     const qnTerms =
                         firstNumber +
                         alphabet1 +
@@ -2859,7 +2859,7 @@ const algebra2 = {
 
                     //first term(a)
                     firstTerma = ansTerm1.slice(0, ansTerm1.indexOf("."));
-                    console.log(firstTerma);
+                    //console.log(firstTerma);
                     if (firstTerma.indexOf("^") == -1) {
                         ansNumerator = firstTerma;
                         ansNumeratorPower = "";
@@ -2875,7 +2875,7 @@ const algebra2 = {
 
                     //second term(b)
                     secondTermb = ansTerm1.slice(ansTerm1.indexOf(".") + 1);
-                    console.log(secondTermb);
+                    //console.log(secondTermb);
                     if (secondTermb.indexOf("^") == -1) {
                         ansNumerator2 = secondTermb;
                         ansNumeratorPower2 = "";
@@ -2887,8 +2887,8 @@ const algebra2 = {
                         ansNumeratorPower2 = secondTermb.slice(
                             secondTermb.indexOf("^") + 1
                         );
-                        console.log(ansNumerator2);
-                        console.log(ansNumeratorPower2);
+                       // console.log(ansNumerator2);
+                        //console.log(ansNumeratorPower2);
                     }
                 } else {
                     if (ansTerm1.indexOf("^") == -1) {
@@ -3655,7 +3655,7 @@ const algebra2 = {
         }
         if (quizData.skill_code == "ALGEBRA_MULTIPLICATION") {
             for (let i = 0; i < questionArray.length; i++) {
-                console.log(questionArray[i].type);
+                //console.log(questionArray[i].type);
                 content += `<div class="row col-9 justify-content-center align-items-center text-center m-auto mb-5"><div class="small col-md-4">Question ${
                     i + 1
                 }</div>`;
@@ -3901,12 +3901,12 @@ const algebra2 = {
 
             //let input = ('ans' in questionArray[i]) ? document.getElementsByClassName("math-field mq-editable-field mq-math-mode")[i].innerText : undefined;
             //debugging notes
-            
+            /*
             console.log(
                 document.getElementsByClassName(
                     "math-field mq-editable-field mq-math-mode"
                 )
-            );
+            );*/
             /*
             console.log(input == questionArray[i].ans);
             console.log(input);

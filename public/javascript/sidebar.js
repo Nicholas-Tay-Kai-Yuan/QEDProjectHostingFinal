@@ -143,7 +143,7 @@ function getUserId() {
 function header() {
     let panel = $('#accountPanel'),
         button = $('#accountButton');
-        console.log(button.append("hi"))
+        //console.log(button.append("hi"))
 
     $(button).click(function (e) {
         alert("clicked")

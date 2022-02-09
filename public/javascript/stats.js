@@ -41,7 +41,7 @@ $(document).on("click", '.select', function () {
     let selected = $(this).children().text();
     $("li").removeClass("active");
     $(this).addClass("active");
-    console.log(selected)
+    //console.log(selected)
 
     if (selected != "Topic") {
         document.getElementById("mainDropdown").style.display="block";
@@ -60,7 +60,7 @@ $(document).on("click", '.dropdown-item', function () {
     count=0;
     let topicObj={Decimals:["Rounding off_Decimals","Addition_Subtraction_Decimals","Multiplication_Decimals","Division_Decimals"],Fractions:["Simplify_Fractions","Addition_Fractions","Multiplication_Fractions"],Algebra:["Addition_Algebra","Multiplication_Algebra","Division_Algebra","Expansion_Algebra","Linear_Equation_Algebra"]};
     
-    console.log(Object.values(topicObj)[Object.keys(topicObj).indexOf(this.id)])
+    //console.log(Object.values(topicObj)[Object.keys(topicObj).indexOf(this.id)])
 
 subtopicArray = Object.values(topicObj)[Object.keys(topicObj).indexOf(this.id)]
 
@@ -102,7 +102,7 @@ function getDetailedBenchmark(query, containerName) {
     });
 }
 function getDetailedBenchmark2(query, containerName) {
-    console.log(query)
+    //console.log(query)
     $.ajax({
         url: `/quiz/benchmark?user=${userId}`+`&topic=`+`${query}`,
         type: 'POST',
@@ -128,7 +128,7 @@ function getDetailedBenchmark2(query, containerName) {
                 }
                 scoreArray.push(average,global);
                 topicArray.splice(topicArray.indexOf(query),1,scoreArray);
-                console.log(topicArray)
+               // console.log(topicArray)
                 
                 count++
 
@@ -154,8 +154,8 @@ function getDetailedBenchmark2(query, containerName) {
     });
 }
 function getDetailedBenchmark3(query, containerName) {
-    console.log(query)
-    console.log(subtopicArray)
+    //console.log(query)
+    //console.log(subtopicArray)
     $.ajax({
         url: `/quiz/benchmark?user=${userId}`+`&skill=`+`${query}`,
         type: 'POST',
@@ -185,7 +185,7 @@ function getDetailedBenchmark3(query, containerName) {
                 
                 
                 count++
-                console.log(subtopicArray)
+                //console.log(subtopicArray)
 
                if(count==subtopicArray.length){
                    for(let i=0;i<subtopicArray.length;i++){
@@ -207,8 +207,8 @@ function getDetailedBenchmark3(query, containerName) {
     });
 }
 function getDetailedBenchmark4(query, containerName) {
-    console.log(query)
-    console.log(subtopicArray)
+    //console.log(query)
+    //console.log(subtopicArray)
     $.ajax({
         url: `/quiz/benchmark?user=${userId}`+`&skill=`+`${query}`,
         type: 'POST',
@@ -266,7 +266,7 @@ function getDetailedBenchmark4(query, containerName) {
                 postQuizArray.splice(1,1,timeArray);
                 
                 
-               console.log(postQuizArray)
+               //console.log(postQuizArray)
                displayChart4(postQuizArray[0],0)
                displayChart4(postQuizArray[1],1)
 
@@ -297,7 +297,7 @@ function getComparisonBenchmark(query) {
             let title = []
             let extractedData = [];
 
-            console.log(data)
+           // console.log(data)
             Object.keys(data).forEach(key => {
 
                 title.push(key);
@@ -343,7 +343,7 @@ function getFilter() {
 
 //Displaying filter options
 function createFilter(data) {
-    console.log(data)
+    //console.log(data)
     let content = '<li span class="dropdown-item" id=""><span>-</span></li>';
     /*
 
@@ -441,7 +441,7 @@ function createCanvas2(amount, title, containerName) {
 }
 
 function displayChart(data, id) {
-    console.log(data)
+    //console.log(data)
     chart = new Chart(document.getElementById(`chart${id}`).getContext('2d'), {
         type: 'bar',
         data: {
@@ -538,7 +538,7 @@ function displayChart2(data, id) {
     })
 }
 function displayChart3(data, id) {
-    console.log(data);
+    //console.log(data);
     chart = new Chart(document.getElementById(`chart${id}`).getContext('2d'), {
         type: 'bar',
         data: {
@@ -586,7 +586,7 @@ function displayChart3(data, id) {
     })
 }
 function displayChart4(data, id) {
-    console.log(data);
+    //console.log(data);
     chart = new Chart(document.getElementById(`chart${id}`).getContext('2d'), {
         type: 'bar',
         data: {
@@ -636,7 +636,7 @@ function displayChart4(data, id) {
 }
 
 function extractDetailedData(datasets) {
-    console.log(datasets)
+    //console.log(datasets)
     let keyArray = ['total_average_score', 'average_time_taken', 'easy_average_score', 'medium_average_score', 'difficult_average_score'];
 
     for (let i = 0; i < 5; i++) {
@@ -648,7 +648,7 @@ function extractDetailedData(datasets) {
         ('recent' in datasets) ? data.push(datasets.recent[key]) : data.push(0);
         ('average' in datasets) ? data.push(datasets.average[key]) : data.push(0);
 
-console.log(data)
+//console.log(data)
         displayChart(data, i);
     }
 }
