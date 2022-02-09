@@ -332,6 +332,8 @@ $(document).on("click", "#deleteBtn", function () {
 });
 
 function getSchool() {
+
+    let schoolOption = document.getElementById("schoolOption");
     let data = {
         resource_id: "ede26d32-01af-4228-b1ed-f05c45a1d8ee", // the resource id
         q: "primary", // query for 'primary'
@@ -342,7 +344,7 @@ function getSchool() {
         data: data,
         dataType: "JSON",
         success: function (data, textStatus, xhr) {
-            let schoolOption = document.getElementById("schoolOption");
+            
 
             for (let i = 0; i < data.result.records.length; i++) {
                 schoolOption.innerHTML += `<option value='${data.result.records[i].school_name}'>${data.result.records[i].school_name}</option>`;
@@ -356,24 +358,27 @@ function getSchool() {
     });
 
      //sec school
-     let data2 = {
-        resource_id: 'ede26d32-01af-4228-b1ed-f05c45a1d8ee', // the resource id
-        q: 'secondary', // query for 'primary'
-        limit: 200 // Recieving limit
+      let data2 = {
+        resource_id: "ede26d32-01af-4228-b1ed-f05c45a1d8ee", // the resource id
+        q: "secondary", // query for 'secondary'
+        limit: 200, // Recieving limit
     };
     $.ajax({
-        url: 'https://data.gov.sg/api/action/datastore_search',
+        url: "https://data.gov.sg/api/action/datastore_search",
         data: data2,
-        dataType: 'JSON',
+        dataType: "JSON",
         success: function (data2, textStatus, xhr) {
+            
+
             for (let i = 0; i < data2.result.records.length; i++) {
-                schoolOption += `<option value='${data2.result.records[i].school_name}'>${data2.result.records[i].school_name}</option>`;
+                schoolOption.innerHTML += `<option value='${data2.result.records[i].school_name}'>${data2.result.records[i].school_name}</option>`;
             }
-            $('#role').trigger("change");
+
+            $("#schoolOption").val(userInfo.school);
         },
         error: function (xhr, textStatus, errorThrown) {
             console.log(errorThrown);
-        }
+        },
     });
 }
 
